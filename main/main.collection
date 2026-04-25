@@ -1,4 +1,21 @@
 name: "main"
+instances {
+  id: "sun"
+  prototype: "/light_and_shadows/props/sun.go"
+  position {
+    x: 13.0
+    y: 19.0
+    z: 16.0
+  }
+  component_properties {
+    id: "sun"
+    properties {
+      id: "color"
+      value: "1.0, 0.75, 0.5, 0.0"
+      type: PROPERTY_TYPE_VECTOR4
+    }
+  }
+}
 scale_along_z: 1
 embedded_instances {
   id: "cube"
