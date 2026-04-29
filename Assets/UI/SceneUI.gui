@@ -1,0 +1,26 @@
+textures {
+  name: "fow"
+  texture: "/light_and_shadows/fow.atlas"
+}
+nodes {
+  position {
+    x: 855.0
+    y: 109.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  type: TYPE_BOX
+  texture: "fow/empty"
+  id: "box"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  material: "minimap_gui"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
+materials {
+  name: "minimap_gui"
+  material: "/light_and_shadows/materials/minimap/minimap_gui.material"
+}
