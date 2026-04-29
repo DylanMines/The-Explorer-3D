@@ -2,7 +2,7 @@ local light_and_shadows = {}
 
 local constants = require "light_and_shadows.constants"
 
-local top = vmath.vector3(0, 1, 0)
+local top = vmath.vector3(0, 0, 1)
 local v0 = vmath.vector4(0, 0, 0, 0) -- zero vector4
 
 -- true - on
@@ -147,6 +147,7 @@ function light_and_shadows.update_light(self)
     for i = 1, light_and_shadows.max_lights do
         local l = constants.lights[i]
         if l then
+            -- position does change
             self.constants.lights[i] = constants.lights[i].position or v0
             self.constants.colors[i] = constants.lights[i].color or v0
             self.constants.directions[i] = constants.lights[i].direction or v0

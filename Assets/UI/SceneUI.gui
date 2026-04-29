@@ -22,5 +22,5 @@ material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT
 materials {
   name: "minimap_gui"
-  material: "/light_and_shadows/materials/minimap/minimap_gui.material"
+  material: "/light_and_shadows/Fog_of_war/materials/minimap/minimap_gui.material"
 }
