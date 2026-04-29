@@ -1,0 +1,15 @@
+mesh: "/builtins/assets/gltf/quad_2x2.gltf"
+name: "unnamed"
+materials {
+  name: "default"
+  material: "/light_and_shadows/materials/fog _of_ war/model_fow.material"
+  textures {
+    sampler: "tex0"
+    texture: "/Assets/Images/empty_texture_1024x1024.png"
+  }
+  textures {
+    sampler: "fow"
+    texture: "/Assets/Images/empty.png"
+  }
+}
+create_go_bones: false
