@@ -24,12 +24,14 @@ instances {
 instances {
   id: "flashlight"
   prototype: "/light_and_shadows/props/bulb.go"
+  children: "go"
   position {
-    z: 0.375
+    y: 10.0
+    z: 7.375
   }
   rotation {
-    x: 1.0
-    w: 6.123234E-17
+    x: 0.70710677
+    w: 0.70710677
   }
   component_properties {
     id: "bulb"
@@ -40,8 +42,13 @@ instances {
     }
     properties {
       id: "power"
-      value: "250.0"
+      value: "400.0"
       type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "light_on"
+      value: "true"
+      type: PROPERTY_TYPE_BOOLEAN
     }
     properties {
       id: "static"
@@ -68,10 +75,9 @@ instances {
 instances {
   id: "sun"
   prototype: "/light_and_shadows/props/sun.go"
+  children: "go1"
   position {
-    x: 81.0
-    y: 51.0
-    z: -526.5
+    z: 20.5
   }
   rotation {
     x: 0.70710677
@@ -81,22 +87,32 @@ instances {
     id: "sun"
     properties {
       id: "color"
-      value: "0.1, 0.1, 0.1, 0.0"
-      type: PROPERTY_TYPE_VECTOR4
-    }
-    properties {
-      id: "shadow"
       value: "0.0, 0.0, 0.0, 0.0"
       type: PROPERTY_TYPE_VECTOR4
     }
     properties {
+      id: "shadow"
+      value: "1.0, 1.0, 1.0, 0.0"
+      type: PROPERTY_TYPE_VECTOR4
+    }
+    properties {
       id: "near"
-      value: "0.0"
+      value: "0.1"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
       id: "far"
-      value: "400.0"
+      value: "1000.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "perspective"
+      value: "true"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "fov"
+      value: "2.8"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
@@ -110,22 +126,18 @@ instances {
   id: "glow"
   prototype: "/light_and_shadows/props/bulb.go"
   position {
-    z: 0.375
-  }
-  rotation {
-    x: 1.0
-    w: 6.123234E-17
+    z: 20.0
   }
   component_properties {
     id: "bulb"
     properties {
       id: "color"
-      value: "1.0, 1.0, 1.0, 1.0"
+      value: "0.85, 0.9, 1.0, 1.0"
       type: PROPERTY_TYPE_VECTOR4
     }
     properties {
       id: "power"
-      value: "10.0"
+      value: "50.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
@@ -133,76 +145,9 @@ instances {
       value: "false"
       type: PROPERTY_TYPE_BOOLEAN
     }
-    properties {
-      id: "direct"
-      value: "false"
-      type: PROPERTY_TYPE_BOOLEAN
-    }
-    properties {
-      id: "angle"
-      value: "30.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
-    properties {
-      id: "static_spot"
-      value: "false"
-      type: PROPERTY_TYPE_BOOLEAN
-    }
   }
 }
 scale_along_z: 1
-embedded_instances {
-  id: "cube"
-  children: "flashlight"
-  children: "glow"
-  data: "components {\n"
-  "  id: \"cube\"\n"
-  "  component: \"/Assets/Models/cube.model\"\n"
-  "}\n"
-  "components {\n"
-  "  id: \"move\"\n"
-  "  component: \"/Assets/Scripts/move.script\"\n"
-  "  properties {\n"
-  "    id: \"speed\"\n"
-  "    value: \"60.0\"\n"
-  "    type: PROPERTY_TYPE_NUMBER\n"
-  "  }\n"
-  "}\n"
-  "embedded_components {\n"
-  "  id: \"collisionobject\"\n"
-  "  type: \"collisionobject\"\n"
-  "  data: \"type: COLLISION_OBJECT_TYPE_DYNAMIC\\n"
-  "mass: 1.0\\n"
-  "friction: 0.1\\n"
-  "restitution: 0.5\\n"
-  "group: \\\"default\\\"\\n"
-  "mask: \\\"default\\\"\\n"
-  "embedded_collision_shape {\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_SPHERE\\n"
-  "    position {\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "    }\\n"
-  "    index: 0\\n"
-  "    count: 1\\n"
-  "  }\\n"
-  "  data: 0.5\\n"
-  "}\\n"
-  "\"\n"
-  "}\n"
-  ""
-  position {
-    x: 78.0
-    y: 40.0
-    z: 8.0
-  }
-  scale3 {
-    x: 8.0
-    y: 8.0
-    z: 16.0
-  }
-}
 embedded_instances {
   id: "root"
   children: "minimap"
@@ -216,7 +161,7 @@ embedded_instances {
   "  }\n"
   "  properties {\n"
   "    id: \"fog_color\"\n"
-  "    value: \"0.0, 0.0, 0.0, 0.0\"\n"
+  "    value: \"0.1, 0.1, 0.1, 0.0\"\n"
   "    type: PROPERTY_TYPE_VECTOR4\n"
   "  }\n"
   "  properties {\n"
@@ -226,12 +171,12 @@ embedded_instances {
   "  }\n"
   "  properties {\n"
   "    id: \"fog_min_max\"\n"
-  "    value: \"10.0, 50.0, 1.0, 1.0\"\n"
+  "    value: \"400.0, 1000.0, 1.0, 1.0\"\n"
   "    type: PROPERTY_TYPE_VECTOR4\n"
   "  }\n"
   "  properties {\n"
   "    id: \"ambient\"\n"
-  "    value: \"0.08, 0.02, 0.08, 0.5\"\n"
+  "    value: \"0.0, 0.0, 0.0, 0.5\"\n"
   "    type: PROPERTY_TYPE_VECTOR4\n"
   "  }\n"
   "  properties {\n"
@@ -255,7 +200,7 @@ embedded_instances {
   "  }\n"
   "  properties {\n"
   "    id: \"player\"\n"
-  "    value: \"/cube\"\n"
+  "    value: \"/player\"\n"
   "    type: PROPERTY_TYPE_URL\n"
   "  }\n"
   "  properties {\n"
@@ -399,4 +344,91 @@ embedded_instances {
   "\"\n"
   "}\n"
   ""
+}
+embedded_instances {
+  id: "player"
+  children: "cube"
+  children: "flashlight"
+  children: "glow"
+  children: "sun"
+  data: "components {\n"
+  "  id: \"move\"\n"
+  "  component: \"/Assets/Scripts/move.script\"\n"
+  "  properties {\n"
+  "    id: \"speed\"\n"
+  "    value: \"60.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"collisionobject\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"type: COLLISION_OBJECT_TYPE_DYNAMIC\\n"
+  "mass: 1.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"default\\\"\\n"
+  "mask: \\\"default\\\"\\n"
+  "embedded_collision_shape {\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_SPHERE\\n"
+  "    position {\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "    }\\n"
+  "    index: 0\\n"
+  "    count: 1\\n"
+  "  }\\n"
+  "  data: 4.0\\n"
+  "}\\n"
+  "\"\n"
+  "}\n"
+  ""
+  position {
+    x: 81.0
+    y: 43.0
+  }
+}
+embedded_instances {
+  id: "cube"
+  data: "components {\n"
+  "  id: \"cube\"\n"
+  "  component: \"/Assets/Models/cube.model\"\n"
+  "}\n"
+  ""
+  position {
+    z: 8.0
+  }
+  scale3 {
+    x: 8.0
+    y: 8.0
+    z: 16.0
+  }
+}
+embedded_instances {
+  id: "go"
+  data: "embedded_components {\n"
+  "  id: \"model\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/light_and_shadows/props/bulb_dir.glb\\\"\\n"
+  "name: \\\"unnamed\\\"\\n"
+  "materials {\\n"
+  "  name: \\\"material_0\\\"\\n"
+  "  material: \\\"/light_and_shadows/materials/hidden_model/yellow.material\\\"\\n"
+  "}\\n"
+  "\"\n"
+  "}\n"
+  ""
+  rotation {
+    x: 0.70710677
+    w: 0.70710677
+  }
+}
+embedded_instances {
+  id: "go1"
+  data: ""
+  rotation {
+    x: -0.70710677
+    w: 0.70710677
+  }
 }

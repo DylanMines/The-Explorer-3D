@@ -39,6 +39,7 @@ void main()
 #ifdef EDITOR
     out_fragColor = color;
 #else 
+    
     // Diffuse light calculations
     vec3 diff_light = diffuse_light(ambient.xyz);
 
@@ -81,22 +82,23 @@ void main()
 
 
     float chess = 1.0;
-            if (mod(floor(gl_FragCoord.y * .25), 2.) > 0.1)
-            {
-            if (mod(floor(gl_FragCoord.x * .25), 2.) > 0.1)
-                chess = 0.;
-            }
-            else 
-            {
-            if (mod(floor(gl_FragCoord.x * .25), 2.) < 0.1)
-                chess = 0.;
-            }
+    if (mod(floor(gl_FragCoord.y * .25), 2.) > 0.1)
+    {
+        if (mod(floor(gl_FragCoord.x * .25), 2.) > 0.1)
+            chess = 0.;
+    }
+    else 
+    {
+        if (mod(floor(gl_FragCoord.x * .25), 2.) < 0.1)
+            chess = 0.;
+    }
 
     // vec3 fw = fog_color.xyz - vec3(.15 * ((var_position.y-8.)/32.)* f_rand(floor(gl_FragCoord.xy / 4.)) ) ;
     // float rnd = f_rand(floor(gl_FragCoord.xy / 4.));
     float height = ((var_position.y-8.)/64.);
     vec3 fw = fog_color.xyz - vec3(.1 * chess * height);// + vec3(.025*rnd);
     // (fog_color.xyz - vec3(clamp((var_position.y-8.)/32., 0., .05)))
+    //out_fragColor = vec4(1.0 - var_fog_of_war.r, var_fog_of_war.r, var_fog_of_war.r, color.a);
     out_fragColor = vec4(frag_color * (var_fog_of_war.r) + fw*(1.0 - var_fog_of_war.r), color.a);
 #endif
 }

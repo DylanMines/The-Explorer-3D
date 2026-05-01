@@ -11,7 +11,7 @@ light.list = {}
 light.cam_look_at = vmath.vector3()
 light.cam_position = vmath.vector3()
 light.cam_view = vmath.quat()
-local top_v     = vmath.vector3(0, 1, 0)
+local top_v     = vmath.vector3(0, 0, 1)
 light.top_v = top_v
 
 light.attenuation_coefficient = 1500
@@ -103,8 +103,10 @@ function light.update(self, dt)
     -- You may remove this loop.
     for i = ind, #lights do
         local a = lights[i]
+        -- use this to block lights using ray casting
         local dist  = a.distance / light.attenuation_coefficient
         dist = dist < 1 and 1 or dist
+        --dist = 1
         a.color.w = a.power * dist --* dist * dist * dist
         -- print( i, a.color.w, dist )
     end
