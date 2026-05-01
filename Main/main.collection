@@ -171,7 +171,7 @@ embedded_instances {
   "  }\n"
   "  properties {\n"
   "    id: \"fog_min_max\"\n"
-  "    value: \"400.0, 1000.0, 1.0, 1.0\"\n"
+  "    value: \"20.0, 50.0, 1.0, 1.0\"\n"
   "    type: PROPERTY_TYPE_VECTOR4\n"
   "  }\n"
   "  properties {\n"
