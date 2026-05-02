@@ -1,10 +1,12 @@
 go.property("speed", 0)
 
 local events = require("event.events")
+local sound_object = "sounds"
+local footsteps = require("Assets.Scripts.footsteps")
 
 local function throw(self)
 	local r = go.get_rotation()
-	local thrust = 7000
+	local thrust = 30000
 	local forward = vmath.rotate(r,  vmath.vector3(0, thrust, 0))
 	--print(self.holding)
 	local url = msg.url(nil, self.holding, "collisionobject")
@@ -12,11 +14,11 @@ local function throw(self)
 	msg.post(url, "enable")
 	msg.post(url, "apply_force", {force = forward, position = go.get_world_position("hold")})
 	events.trigger("interact", {})
+	sound.play(sound_object.."#throw")
 	self.holding = nil
 end
 
 local function pickup(self, other)
-	
 	local url = msg.url(nil, other, "collisionobject")
 	msg.post(url, "disable")
 	go.set_position(vmath.vector3(0), other)
@@ -24,6 +26,7 @@ local function pickup(self, other)
 	self.holding = other
 	self.interaction = nil
 	events.trigger("interact", {key = 'e', text = 'throw'})
+	sound.play(sound_object.."#pickup")
 end
 
 function init(self)
@@ -48,6 +51,9 @@ function update(self, dt)
 		local rotation_speed = 11 -- tweak this!
 		local rotation = vmath.slerp(rotation_speed * dt, current_rotation, target_rotation)
 		go.set_rotation(rotation)
+		footsteps.start(sound_object)
+	else
+		footsteps.stop(sound_object)
 	end
 	go.set_position(go.get_position() + self.input * dt * self.speed)
 	self.correction = vmath.vector3()
