@@ -11,7 +11,6 @@ local step_sounds = {
 }
 
 local function choose_sound()
-    print(math.random(1, #step_sounds))
     return step_sounds[math.random(1, #step_sounds)]
 end
 
