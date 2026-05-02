@@ -1,3 +1,4 @@
+script: "/Assets/UI/playerUI.gui_script"
 fonts {
   name: "Arco"
   font: "/Assets/Fonts/Arco.font"
@@ -12,8 +13,8 @@ textures {
 }
 nodes {
   position {
-    x: 855.0
-    y: 109.0
+    x: 1900.0
+    y: 20.0
   }
   scale {
     x: 3.0
@@ -22,32 +23,39 @@ nodes {
   type: TYPE_BOX
   texture: "fow/empty"
   id: "box"
+  xanchor: XANCHOR_RIGHT
+  yanchor: YANCHOR_BOTTOM
+  pivot: PIVOT_SE
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
   material: "minimap_gui"
 }
 nodes {
+  position {
+    x: 960.0
+    y: 280.0
+  }
   type: TYPE_TEMPLATE
   id: "interaction"
   inherit_alpha: true
-  template: "/Assets/UI/interaction.gui"
+  template: "/Assets/UI/Interaction/interaction.gui"
 }
 nodes {
   type: TYPE_BOX
-  id: "interaction/interaction_prompt"
+  id: "interaction/root"
   parent: "interaction"
   template_node_child: true
 }
 nodes {
   type: TYPE_BOX
   id: "interaction/button_image"
-  parent: "interaction/interaction_prompt"
+  parent: "interaction/root"
   template_node_child: true
 }
 nodes {
   type: TYPE_TEXT
   id: "interaction/text"
-  parent: "interaction/interaction_prompt"
+  parent: "interaction/root"
   template_node_child: true
 }
 material: "/builtins/materials/gui.material"
