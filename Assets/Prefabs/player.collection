@@ -1,0 +1,157 @@
+name: "Player"
+instances {
+  id: "flashlight"
+  prototype: "/light_and_shadows/props/bulb.go"
+  position {
+    y: 10.0
+    z: 7.35
+  }
+  rotation {
+    x: 0.70710677
+    w: 0.70710677
+  }
+  component_properties {
+    id: "bulb"
+    properties {
+      id: "power"
+      value: "400.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "static"
+      value: "false"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "direct"
+      value: "true"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "angle"
+      value: "30.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "static_spot"
+      value: "false"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+  }
+}
+instances {
+  id: "sun"
+  prototype: "/light_and_shadows/props/sun.go"
+  children: "go"
+  position {
+    z: 20.5
+  }
+  rotation {
+    x: 0.70710677
+    w: 0.70710677
+  }
+  component_properties {
+    id: "sun"
+    properties {
+      id: "color"
+      value: "0.0, 0.0, 0.0, 0.0"
+      type: PROPERTY_TYPE_VECTOR4
+    }
+    properties {
+      id: "shadow"
+      value: "1.0, 1.0, 1.0, 0.0"
+      type: PROPERTY_TYPE_VECTOR4
+    }
+    properties {
+      id: "near"
+      value: "0.1"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "far"
+      value: "30.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "perspective"
+      value: "true"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "fov"
+      value: "2.8"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "static"
+      value: "false"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "depth_bias"
+      value: "9.0E-5"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+}
+scale_along_z: 0
+embedded_instances {
+  id: "player"
+  children: "character"
+  children: "flashlight"
+  children: "sun"
+  data: "components {\n"
+  "  id: \"move\"\n"
+  "  component: \"/Assets/Scripts/move.script\"\n"
+  "  properties {\n"
+  "    id: \"speed\"\n"
+  "    value: \"50.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"collisionobject\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"type: COLLISION_OBJECT_TYPE_DYNAMIC\\n"
+  "mass: 1.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"default\\\"\\n"
+  "mask: \\\"default\\\"\\n"
+  "embedded_collision_shape {\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_SPHERE\\n"
+  "    position {\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "    }\\n"
+  "    index: 0\\n"
+  "    count: 1\\n"
+  "  }\\n"
+  "  data: 4.0\\n"
+  "}\\n"
+  "\"\n"
+  "}\n"
+  ""
+}
+embedded_instances {
+  id: "character"
+  data: "components {\n"
+  "  id: \"cube\"\n"
+  "  component: \"/Assets/Models/cube.model\"\n"
+  "}\n"
+  ""
+  scale3 {
+    x: 8.0
+    y: 8.0
+    z: 9.0
+  }
+}
+embedded_instances {
+  id: "go"
+  data: ""
+  rotation {
+    x: -0.70710677
+    w: 0.70710677
+  }
+}

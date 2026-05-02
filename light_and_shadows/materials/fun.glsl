@@ -29,7 +29,7 @@ uniform fs_uniforms
 
 
 #define USE_PCF_SHADOW
-// #define USE_PCF_POISSON_SHADOW
+//#define USE_PCF_POISSON_SHADOW
 // #define USE_FLAT_SHADOW
 
 #define USE_DIFFUSE_LIGHT

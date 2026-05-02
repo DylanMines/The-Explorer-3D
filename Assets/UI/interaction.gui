@@ -1,0 +1,71 @@
+fonts {
+  name: "druid_text_regular"
+  font: "/druid/fonts/druid_text_regular.font"
+}
+fonts {
+  name: "Arco"
+  font: "/Assets/Fonts/Arco.font"
+}
+textures {
+  name: "white_keys"
+  texture: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/white_keys.atlas"
+}
+nodes {
+  position {
+    x: 483.0
+    y: 192.0
+  }
+  size {
+    x: 250.0
+    y: 50.0
+  }
+  color {
+    x: 0.6
+    y: 0.6
+    z: 0.6
+  }
+  type: TYPE_BOX
+  id: "interaction_prompt"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: -125.0
+  }
+  size {
+    x: 50.0
+    y: 50.0
+  }
+  type: TYPE_BOX
+  texture: "white_keys/e_white"
+  id: "button_image"
+  xanchor: XANCHOR_LEFT
+  pivot: PIVOT_W
+  parent: "interaction_prompt"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: -70.0
+  }
+  scale {
+    x: 0.4
+    y: 0.4
+  }
+  size {
+    x: 450.0
+    y: 50.0
+  }
+  type: TYPE_TEXT
+  text: "pickup orange"
+  font: "Arco"
+  id: "text"
+  xanchor: XANCHOR_LEFT
+  pivot: PIVOT_W
+  parent: "interaction_prompt"
+  inherit_alpha: true
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

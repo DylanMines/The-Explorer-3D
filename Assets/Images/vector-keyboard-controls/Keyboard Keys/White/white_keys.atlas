@@ -1,0 +1,1003 @@
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/0_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/1_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/2_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/3_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/4_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/5_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/6_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/7_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/8_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/9_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/a-acute_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/a-circumflex_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/a-grave_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/a-ring_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/a-tilde_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/a-umlaut_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/a_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/ae_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/alt_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/ampersand_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/apostrophe_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/apple_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/arrow-down_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/arrow-left_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/arrow-right_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/arrow-up_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/asterisk_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/at_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/b_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/backslash_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/backspace_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/backtick_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/blank_lg_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/blank_md_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/blank_sm_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/bracket-close_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/bracket-open_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/c-cedillla_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/c_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/caps_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/caret_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/cmd_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/colon_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/comma_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/ctrl_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/curly-bracket-close_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/curly-bracket-open_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/d_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/delete_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/dollar_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/e-acute_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/e-circumflex_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/e-grave_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/e-umlaut_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/e_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/end_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/enter-icon_lg_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/enter-icon_md_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/enter-icon_sm_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/enter_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/equals_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/escape_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/eszett_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/euro_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/exclamation-mark-inverted_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/exclamation-mark_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/exclamation-question-mark_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/f1_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/f2_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/f3_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/f4_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/f5_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/f6_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/f7_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/f8_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/f9_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/f10_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/f11_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/f12_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/f_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/fn_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/full-stop_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/g_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/greater-than_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/h_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/hash_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/home-icon_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/home_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/i-acute_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/i-circumflex_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/i-grave_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/i-umlaut_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/i_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/insert_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/j_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/k_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/l_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/less-than_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/m_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/minus_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/n-tilde_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/n_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/not_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/o-acute_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/o-circumflex_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/o-grave_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/o-slash_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/o-tilde_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/o-umlaut_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/o_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/oe_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/option_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/p_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/page-down_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/page-up_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/percent_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/plus_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/pound_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/q_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/question-mark-inverted_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/question-mark_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/quotation-marks_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/r_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/return_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/s_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/semicolon_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/shift-icon_md_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/shift_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/slash_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/space_lg_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/space_md_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/square-bracket-close_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/square-bracket-open_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/strg_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/t_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/tab-icon_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/tab_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/tilde_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/u-acute_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/u-circumflex_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/u-grave_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/u-umlaut_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/u_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/underscore_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/v_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/vertical-bar_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/w_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/windows_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/x_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/y_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/z_white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/0_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/1_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/2_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/3_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/4_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/5_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/6_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/7_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/8_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/9_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/a-acute_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/a-circumflex_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/a-grave_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/a-ring_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/a-tilde_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/a-umlaut_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/a_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/ae_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/alt_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/ampersand_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/apostrophe_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/apple_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/arrow-down_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/arrow-left_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/arrow-right_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/arrow-up_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/asterisk_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/at_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/b_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/backslash_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/backspace_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/backtick_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/blank_lg_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/blank_md_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/blank_sm_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/bracket-close_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/bracket-open_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/c-cedillla_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/c_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/caps_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/caret_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/cmd_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/colon_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/comma_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/ctrl_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/curly-bracket-close_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/curly-bracket-open_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/d_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/delete_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/dollar_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/e-acute_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/e-circumflex_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/e-grave_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/e-umlaut_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/e_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/end_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/enter-icon_lg_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/enter-icon_md_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/enter-icon_sm_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/enter_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/equals_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/escape_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/eszett_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/euro_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/exclamation-mark-inverted_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/exclamation-mark_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/exclamation-question-mark_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/f1_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/f2_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/f3_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/f4_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/f5_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/f6_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/f7_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/f8_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/f9_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/f10_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/f11_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/f12_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/f_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/fn_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/full-stop_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/g_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/greater-than_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/h_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/hash_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/home-icon_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/home_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/i-acute_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/i-circumflex_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/i-grave_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/i-umlaut_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/i_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/insert_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/j_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/k_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/l_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/less-than_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/m_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/minus_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/n-tilde_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/n_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/not_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/o-acute_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/o-circumflex_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/o-grave_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/o-slash_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/o-tilde_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/o-umlaut_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/o_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/oe_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/option_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/p_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/page-down_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/page-up_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/percent_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/plus_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/pound_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/q_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/question-mark-inverted_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/question-mark_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/quotation-marks_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/r_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/return_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/s_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/semicolon_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/shift-icon_md_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/shift_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/slash_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/space_lg_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/space_md_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/square-bracket-close_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/square-bracket-open_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/strg_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/t_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/tab-icon_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/tab_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/tilde_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/u-acute_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/u-circumflex_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/u-grave_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/u-umlaut_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/u_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/underscore_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/v_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/vertical-bar_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/w_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/windows_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/x_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/y_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/z_white_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG/LeftClick_White.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG/MiddleClick_White.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG/Mouse_White.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG/Move_White.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG/MoveDiagonal_White.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG/MoveDown_White.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG/MoveLeft_White.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG/MoveLeftRight_White.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG/MoveRight_White.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG/MoveUp_White.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG/MoveUpDown_White.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG/RightClick_White.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG/Scroll_White.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG/ScrollDown_White.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG/ScrollUp_White.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG_4x/LeftClick_White_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG_4x/MiddleClick_White_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG_4x/Mouse_White_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG_4x/Move_White_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG_4x/MoveDiagonal_White_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG_4x/MoveDown_White_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG_4x/MoveLeft_White_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG_4x/MoveLeftRight_White_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG_4x/MoveRight_White_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG_4x/MoveUp_White_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG_4x/MoveUpDown_White_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG_4x/RightClick_White_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG_4x/Scroll_White_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG_4x/ScrollDown_White_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Mouse Controls/White/PNG_4x/ScrollUp_White_4x.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG/shift-icon_sm_1white.png"
+}
+images {
+  image: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/PNG_4x/shift-icon_sm_1white_4x.png"
+}
+extrude_borders: 2

@@ -21,6 +21,7 @@ As far as I can tell this does have to do with the normals
 
 local function get_player_position_xy(self)
 	local position = go.get_position(self.player) / TILE_SIZE
+	print(position)
 	return math.ceil(position.x) - self.offset.x, math.ceil(position.y) - self.offset.y
 end
 

@@ -1,6 +1,14 @@
+fonts {
+  name: "Arco"
+  font: "/Assets/Fonts/Arco.font"
+}
 textures {
   name: "fow"
   texture: "/light_and_shadows/fow.atlas"
+}
+textures {
+  name: "white_keys"
+  texture: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/white_keys.atlas"
 }
 nodes {
   position {
@@ -17,6 +25,30 @@ nodes {
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
   material: "minimap_gui"
+}
+nodes {
+  type: TYPE_TEMPLATE
+  id: "interaction"
+  inherit_alpha: true
+  template: "/Assets/UI/interaction.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "interaction/interaction_prompt"
+  parent: "interaction"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "interaction/button_image"
+  parent: "interaction/interaction_prompt"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_TEXT
+  id: "interaction/text"
+  parent: "interaction/interaction_prompt"
+  template_node_child: true
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

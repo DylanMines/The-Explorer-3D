@@ -1,0 +1,7 @@
+font: "/Assets/Fonts/ARCO.ttf"
+material: "/builtins/fonts/font.material"
+size: 40
+outline_alpha: 1.0
+shadow_blur: 0
+all_chars: true
+characters: " !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"

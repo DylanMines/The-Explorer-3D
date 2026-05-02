@@ -39,6 +39,7 @@ void main()
 
     // Direct light minus shadow
     diff_light += direct_light(color0.xyz, light.xyz, var_position.xyz, var_normal, minus_color);
+    diff_light -= minus_color;
     diff_light = clamp(diff_light, 0.0, ambient.w);
     vec3 frag_color  = color.rgb * diff_light ;
 
