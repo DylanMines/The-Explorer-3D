@@ -1,47 +1,86 @@
 go.property("speed", 0)
 
+local events = require("event.events")
+
+local function throw(self)
+	local r = go.get_rotation()
+	local thrust = 7000
+	local forward = vmath.rotate(r,  vmath.vector3(0, thrust, 0))
+	--print(self.holding)
+	local url = msg.url(nil, self.holding, "collisionobject")
+	go.set_parent(url, nil, true)
+	msg.post(url, "enable")
+	msg.post(url, "apply_force", {force = forward, position = go.get_world_position("hold")})
+	events.trigger("interact", {})
+	self.holding = nil
+end
+
+local function pickup(self, other)
+	
+	local url = msg.url(nil, other, "collisionobject")
+	msg.post(url, "disable")
+	go.set_position(vmath.vector3(0), other)
+	go.set_parent(other, "hold")
+	self.holding = other
+	self.interaction = nil
+	events.trigger("interact", {key = 'e', text = 'throw'})
+end
+
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	self.input = vmath.vector3()
-end
 
-function final(self)
-	-- Add finalization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
+	self.rotating = false
+	self.interaction = nil
+	self.holding = nil
+
+	self.correction = vmath.vector3()
 end
 
 function update(self, dt)
 	if vmath.length_sqr(self.input) > 1 then
 		self.input = vmath.normalize(self.input)
 	end
-	if vmath.length_sqr(self.input) ~= 0 then
-		local rotation = math.deg(math.atan2(self.input.y, self.input.x)) - 90
-		go.set(go.get_id(), "euler.z", rotation)
+	if vmath.length_sqr(self.input) ~= 0  then
+		local target_angle = math.atan2(self.input.y, self.input.x) - (math.pi/2)
+		local current_rotation = go.get_rotation()
+		local target_rotation = vmath.quat_rotation_z(target_angle)
+		local rotation_speed = 11 -- tweak this!
+		local rotation = vmath.slerp(rotation_speed * dt, current_rotation, target_rotation)
+		go.set_rotation(rotation)
 	end
 	go.set_position(go.get_position() + self.input * dt * self.speed)
+	self.correction = vmath.vector3()
 	self.input = vmath.vector3()
 end
 
-function late_update(self, dt)
-	-- This function is called at the end of update cycle but before render
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
-
-function fixed_update(self, dt)
-	-- This function is called if 'Fixed Update Frequency' is enabled in the Engine section of game.project
-	-- Can be coupled with fixed updates of the physics simulation if 'Use Fixed Timestep' is enabled in
-	-- Physics section of game.project
-	-- Add update code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
 
 function on_message(self, message_id, message, sender)
-	-- Add message-handling code here
-	-- Learn more: https://defold.com/manuals/message-passing/
-	-- Remove this function if not needed
+	if message_id == hash("trigger_response") then
+		if message.other_group == hash("fruit") and not self.holding then
+			local data = {}
+			if message.enter then
+				data.key = "e"
+				data.text = "pickup orange"
+				self.interaction = message.other_id
+			else
+				interaction = nil
+			end
+			events.trigger("interact", data)
+		end
+	elseif message_id == hash("contact_point_response") then
+		if message.distance > 0 then
+			local proj = vmath.project(self.correction, message.normal * message.distance)
+			if proj < 1 then
+				-- Only care for projections that does not overshoot.
+				local comp = (message.distance - message.distance * proj) * message.normal
+				-- Apply compensation
+				go.set_position(go.get_position() + comp)
+				-- Accumulate correction done
+				self.correction = self.correction + comp
+			end
+		end
+	end
 end
 
 function on_input(self, action_id, action)
@@ -53,6 +92,12 @@ function on_input(self, action_id, action)
 		self.input.x = -1
 	elseif action_id == hash("right") then
 		self.input.x = 1
+	elseif action_id == hash("e") and action.released then
+		if self.interaction then
+			pickup(self, self.interaction)
+		elseif self.holding then
+			throw(self)
+		end
 	end
 end
 

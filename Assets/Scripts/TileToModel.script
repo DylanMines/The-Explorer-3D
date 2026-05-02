@@ -51,7 +51,6 @@ function init(self)
 		-- 	[2] = {x = 128, y = 0, w = 128, h = 256},
 		-- }
 	}
-
     
     self.grid = mtool.create_mesh_from_tilemap(self.Model, options)
 	--tilemap.set_visible("#Test", "layer1", false)

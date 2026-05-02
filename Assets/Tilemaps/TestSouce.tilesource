@@ -15,7 +15,7 @@ convex_hulls {
 convex_hulls {
   index: 8
   count: 4
-  collision_group: "default"
+  collision_group: ""
 }
 convex_hulls {
   index: 12
@@ -85,7 +85,7 @@ convex_hulls {
 convex_hulls {
   index: 24
   count: 4
-  collision_group: "default"
+  collision_group: ""
 }
 convex_hulls {
   index: 28

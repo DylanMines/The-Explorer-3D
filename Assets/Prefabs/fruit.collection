@@ -9,6 +9,11 @@ instances {
       value: "1.0, 0.8, 0.3, 1.0"
       type: PROPERTY_TYPE_VECTOR4
     }
+    properties {
+      id: "static"
+      value: "false"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
   }
   scale3 {
     x: 0.1

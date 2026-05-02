@@ -34,13 +34,19 @@ function init(self)
 	fow.init(self, tw, th, TILE_SIZE, self.fow)
 	local x, y = get_player_position_xy(self)
     fow.draw(x, y, 22)
+	tilemap.set_visible(self.tileMap, "fruits", false)
 	
 	for y = ty, (th + ty - 1) do
         for x = tx, (tw + tx - 1) do
             local v = tilemap.get_tile(self.tileMap, "layer1", x, y)
+			local f = tilemap.get_tile(self.tileMap, "fruits", x, y)
             if v == 1 then
                 fow.set_b(x - tx, y - ty, 255)
             end
+			if f == 17 then
+				local position = vmath.vector3(x * TILE_SIZE, y * TILE_SIZE, 8) + self.offset - vmath.vector3(TILE_SIZE/2, TILE_SIZE/2, 0)
+				collectionfactory.create("#fruit_factory", position)
+			end
         end
     end
 

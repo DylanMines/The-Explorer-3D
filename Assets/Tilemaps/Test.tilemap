@@ -1,7 +1,7 @@
 tile_set: "/Assets/Tilemaps/TestSouce.tilesource"
 layers {
   id: "floor"
-  z: -1.0
+  z: 0.0
   cell {
     x: 1
     y: 0
@@ -1838,6 +1838,11 @@ layers {
     tile: 18
   }
   cell {
+    x: 11
+    y: 17
+    tile: 18
+  }
+  cell {
     x: 12
     y: 17
     tile: 18
@@ -2859,7 +2864,7 @@ layers {
   cell {
     x: 3
     y: 6
-    tile: 0
+    tile: 2
   }
   cell {
     x: 4
@@ -3552,11 +3557,6 @@ layers {
     tile: 0
   }
   cell {
-    x: 11
-    y: 17
-    tile: 0
-  }
-  cell {
     x: 12
     y: 17
     tile: 0
@@ -3824,6 +3824,40 @@ layers {
   cell {
     x: 63
     y: 63
+    tile: 0
+  }
+}
+layers {
+  id: "fruits"
+  z: 0.0
+  cell {
+    x: 2
+    y: 3
+    tile: 16
+  }
+  cell {
+    x: 9
+    y: 4
+    tile: 16
+  }
+  cell {
+    x: 15
+    y: 6
+    tile: 16
+  }
+  cell {
+    x: 15
+    y: 8
+    tile: 16
+  }
+  cell {
+    x: 19
+    y: 10
+    tile: 16
+  }
+  cell {
+    x: 47
+    y: 33
     tile: 0
   }
 }
