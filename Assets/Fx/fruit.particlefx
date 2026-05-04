@@ -4,7 +4,7 @@ emitters {
   space: EMISSION_SPACE_WORLD
   tile_source: "/builtins/graphics/particle_blob.tilesource"
   animation: "anim"
-  material: "/light_and_shadows/Fog_of_war/materials/billboard_particlefx_nearest.material"
+  material: "/builtins/materials/particlefx.material"
   blend_mode: BLEND_MODE_ADD
   max_particle_count: 128
   type: EMITTER_TYPE_SPHERE

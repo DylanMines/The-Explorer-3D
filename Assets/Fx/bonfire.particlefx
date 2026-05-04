@@ -2,20 +2,16 @@ emitters {
   mode: PLAY_MODE_LOOP
   duration: 0.5
   space: EMISSION_SPACE_EMITTER
-  position {
-    y: 3.0
-  }
   tile_source: "/builtins/graphics/particle_blob.tilesource"
   animation: "anim"
-  material: "/builtins/materials/particlefx.material"
+  material: "/light_and_shadows/materials/billboard_particle/billboard_particlefx.material"
   blend_mode: BLEND_MODE_ADD
-  particle_orientation: PARTICLE_ORIENTATION_MOVEMENT_DIRECTION
   max_particle_count: 64
   type: EMITTER_TYPE_BOX
   properties {
     key: EMITTER_KEY_SPAWN_RATE
     points {
-      y: 7.0
+      y: 8.0
     }
     spread: 2.0
   }
@@ -34,7 +30,7 @@ emitters {
   properties {
     key: EMITTER_KEY_SIZE_Z
     points {
-      y: 0.5
+      y: 1.0
     }
   }
   properties {
@@ -49,14 +45,14 @@ emitters {
     points {
       y: 0.0
     }
-    spread: 5.0
+    spread: 1.0
   }
   properties {
     key: EMITTER_KEY_PARTICLE_SIZE
     points {
-      y: 1.0
+      y: 0.2
     }
-    spread: 0.1
+    spread: 0.05
   }
   properties {
     key: EMITTER_KEY_PARTICLE_RED
@@ -145,12 +141,22 @@ emitters {
   }
   modifiers {
     type: MODIFIER_TYPE_ACCELERATION
+    rotation {
+      x: 0.70710677
+      w: 0.70710677
+    }
     properties {
       key: MODIFIER_KEY_MAGNITUDE
       points {
-        y: 15.0
+        y: 25.0
       }
     }
   }
   duration_spread: 0.1
+  attributes {
+    name: "billboard_mode"
+    double_values {
+      v: 0.0
+    }
+  }
 }

@@ -23,15 +23,12 @@ collection_instances {
   id: "torch"
   collection: "/Assets/Prefabs/torch.collection"
   position {
-    x: 36.7
-    y: 69.0
-    z: 6.0
+    x: 48.0
+    y: 48.0
   }
   rotation {
-    x: 0.5032892
-    y: 0.49668893
-    z: 0.496689
-    w: 0.5032892
+    z: 1.0
+    w: 6.123234E-17
   }
 }
 scale_along_z: 1
@@ -112,6 +109,12 @@ embedded_instances {
   "  id: \"button_factory\"\n"
   "  type: \"collectionfactory\"\n"
   "  data: \"prototype: \\\"/Assets/Prefabs/button.collection\\\"\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"torch_factory\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/Assets/Prefabs/torch.collection\\\"\\n"
   "\"\n"
   "}\n"
   ""

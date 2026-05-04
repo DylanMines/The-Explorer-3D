@@ -2,39 +2,12 @@ name: "torch"
 scale_along_z: 0
 embedded_instances {
   id: "torch"
+  children: "light"
   children: "model"
-  data: "components {\n"
-  "  id: \"bonfire\"\n"
-  "  component: \"/Assets/Fx/bonfire.particlefx\"\n"
-  "  position {\n"
-  "    y: 9.0\n"
-  "  }\n"
-  "}\n"
-  "components {\n"
-  "  id: \"bulb\"\n"
-  "  component: \"/light_and_shadows/bulb.script\"\n"
-  "  properties {\n"
-  "    id: \"color\"\n"
-  "    value: \"1.0, 0.8, 0.0, 1.0\"\n"
-  "    type: PROPERTY_TYPE_VECTOR4\n"
-  "  }\n"
-  "  properties {\n"
-  "    id: \"power\"\n"
-  "    value: \"200.0\"\n"
-  "    type: PROPERTY_TYPE_NUMBER\n"
-  "  }\n"
-  "  properties {\n"
-  "    id: \"fxurl\"\n"
-  "    value: \"#bonfire\"\n"
-  "    type: PROPERTY_TYPE_URL\n"
-  "  }\n"
-  "  properties {\n"
-  "    id: \"startfx\"\n"
-  "    value: \"true\"\n"
-  "    type: PROPERTY_TYPE_BOOLEAN\n"
-  "  }\n"
-  "}\n"
-  ""
+  data: ""
+  position {
+    y: 11.4
+  }
 }
 embedded_instances {
   id: "model"
@@ -55,12 +28,47 @@ embedded_instances {
   "}\n"
   ""
   rotation {
-    y: -0.70710677
+    x: 0.70710677
     w: 0.70710677
   }
   scale3 {
     x: 20.0
     y: 20.0
     z: 20.0
+  }
+}
+embedded_instances {
+  id: "light"
+  data: "components {\n"
+  "  id: \"bonfire\"\n"
+  "  component: \"/Assets/Fx/bonfire.particlefx\"\n"
+  "}\n"
+  "components {\n"
+  "  id: \"bulb\"\n"
+  "  component: \"/light_and_shadows/bulb.script\"\n"
+  "  properties {\n"
+  "    id: \"color\"\n"
+  "    value: \"1.0, 0.7, 0.0, 1.0\"\n"
+  "    type: PROPERTY_TYPE_VECTOR4\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"power\"\n"
+  "    value: \"200.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"fxurl\"\n"
+  "    value: \"#bonfire\"\n"
+  "    type: PROPERTY_TYPE_URL\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"startfx\"\n"
+  "    value: \"true\"\n"
+  "    type: PROPERTY_TYPE_BOOLEAN\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    z: 11.4
   }
 }
