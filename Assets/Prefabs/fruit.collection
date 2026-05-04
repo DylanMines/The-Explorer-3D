@@ -1,30 +1,7 @@
 name: "fruit"
-instances {
-  id: "bulb"
-  prototype: "/light_and_shadows/props/bulb.go"
-  component_properties {
-    id: "bulb"
-    properties {
-      id: "color"
-      value: "1.0, 0.8, 0.3, 1.0"
-      type: PROPERTY_TYPE_VECTOR4
-    }
-    properties {
-      id: "static"
-      value: "false"
-      type: PROPERTY_TYPE_BOOLEAN
-    }
-  }
-  scale3 {
-    x: 0.1
-    y: 0.1
-    z: 0.1
-  }
-}
 scale_along_z: 0
 embedded_instances {
   id: "fruit"
-  children: "bulb"
   children: "model"
   data: "components {\n"
   "  id: \"fruit\"\n"
@@ -37,7 +14,7 @@ embedded_instances {
   "mass: 0.0\\n"
   "friction: 0.1\\n"
   "restitution: 0.5\\n"
-  "group: \\\"fruit\\\"\\n"
+  "group: \\\"fruit_trigger\\\"\\n"
   "mask: \\\"default\\\"\\n"
   "embedded_collision_shape {\\n"
   "  shapes {\\n"
@@ -63,9 +40,9 @@ embedded_instances {
   "mass: 1.0\\n"
   "friction: 0.1\\n"
   "restitution: 0.5\\n"
-  "group: \\\"default\\\"\\n"
+  "group: \\\"fruit\\\"\\n"
   "mask: \\\"default\\\"\\n"
-  "mask: \\\"ground\\\"\\n"
+  "mask: \\\"button\\\"\\n"
   "embedded_collision_shape {\\n"
   "  shapes {\\n"
   "    shape_type: TYPE_SPHERE\\n"

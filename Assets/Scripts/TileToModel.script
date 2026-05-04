@@ -6,10 +6,10 @@ local mtool = require("Assets.Scripts.mtool")
 function init(self)
 	local options = {
 		tilemap = msg.url("#Test"), -- Tilemap URL.
-		layer = "layer1", -- Tilemap layer name.
-		w = 16, -- Horizontal number of tiles in tileset (texture atlas).
-		h = 16, -- Vertical number of tiles in tileset (texture atlas).
-		tilesize = 16, -- Size of tile in pixels (it will be use as scale factor when a script generates quads).
+		layer = "walls", -- Tilemap layer name.
+		w = 8, -- Horizontal number of tiles in tileset (texture atlas).
+		h = 8, -- Vertical number of tiles in tileset (texture atlas).
+		tilesize = 32, -- Size of tile in pixels (it will be use as scale factor when a script generates quads).
 		
 		-- Note: The same image that using as tilesource image we are using as a texture for generated mesh.
 		-- Each tile in tilemap layer will represented as box.
@@ -23,21 +23,20 @@ function init(self)
 		-- So, mapping it as: [N] = {N, M, N, N, N, N}
 		-- 
 		
-		tile_info = {
-			[2] = {2, 18, 34, 1, 1, 1},
-			[3] = {3, 19, 35, 1, 1, 1},
-			[4] = {4, 20, 36, 1, 1, 1},
-			[6] = {6, 19, 35, 1, 1, 1},
-			[51] = {51, 49, 49, 49, 49, 49},
-			[53] = {53, 49, 49, 49, 49, 49},
-		},
-
+		-- tile_info = {
+		-- 	[2] = {2, 18, 34, 1, 1, 1},
+		-- 	[3] = {3, 19, 35, 1, 1, 1},
+		-- 	[4] = {4, 20, 36, 1, 1, 1},
+		-- 	[6] = {6, 19, 35, 1, 1, 1},
+		-- 	[51] = {51, 49, 49, 49, 49, 49},
+		-- 	[53] = {53, 49, 49, 49, 49, 49},
+		-- },
 		-- You also can setup function 'tile_info_fn' for dynamic setting tile number. It may useful for generating levels in runtime.
 		-- tile_info_fn = function(tileno, x, y)
 	  	-- 	if tileno == 1 then tilemap.set_tile("#Test", "layer1", x, y, 33) end
 		-- end,
 
-		optimize = true, -- If 'true' a script will culling the hidden by neighbors faces (edges 2,3,4,5).
+		optimize = false, -- If 'true' a script will culling the hidden by neighbors faces (edges 2,3,4,5).
 		optimize_back = false -- If 'true' a script will culling back face (6) for all tiles.
 
 		-- Also you may setup a texture atlas and setup for some tile numbers UV coordinates directly way.

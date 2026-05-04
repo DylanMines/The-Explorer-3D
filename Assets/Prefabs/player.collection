@@ -69,11 +69,32 @@ instances {
     }
   }
 }
+instances {
+  id: "glow"
+  prototype: "/light_and_shadows/props/bulb.go"
+  position {
+    z: 7.0
+  }
+  component_properties {
+    id: "bulb"
+    properties {
+      id: "power"
+      value: "50.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "static"
+      value: "false"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "player"
   children: "character"
   children: "flashlight"
+  children: "glow"
   children: "hold"
   children: "sounds"
   children: "sun"
@@ -95,7 +116,7 @@ embedded_instances {
   "restitution: 0.5\\n"
   "group: \\\"default\\\"\\n"
   "mask: \\\"default\\\"\\n"
-  "mask: \\\"fruit\\\"\\n"
+  "mask: \\\"fruit_trigger\\\"\\n"
   "embedded_collision_shape {\\n"
   "  shapes {\\n"
   "    shape_type: TYPE_SPHERE\\n"
@@ -120,9 +141,9 @@ embedded_instances {
   "}\n"
   ""
   scale3 {
-    x: 8.0
-    y: 8.0
-    z: 9.0
+    x: 16.0
+    y: 16.0
+    z: 20.0
   }
 }
 embedded_instances {

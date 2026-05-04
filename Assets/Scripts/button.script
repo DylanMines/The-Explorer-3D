@@ -1,0 +1,18 @@
+go.property("interaction_group", 0)
+
+local door = require("Assets.Scripts.door")
+local camera = require("orthographic.camera")
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("trigger_response") then
+		if message.enter then
+			sound.play("#click")
+			sound.play("#door")
+			camera.shake(nil, 0.001, 7.6)
+			door.open_all(self.interaction_group)
+			go.delete(message.other_id, true)
+			-- change sprite
+			msg.post("#", "disable")
+		end
+	end
+end

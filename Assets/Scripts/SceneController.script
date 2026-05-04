@@ -1,12 +1,13 @@
 local fow = require 'light_and_shadows.fow'
 local light = require 'light_and_shadows.light'
+local door = require("Assets.Scripts.door")
 
 go.property("fow", resource.texture(""))
 go.property("tileMap", msg.url())
 go.property("player", msg.url())
 go.property("camera_go_id", msg.url())
 
-local TILE_SIZE = 16
+local TILE_SIZE = 32
 local last_x
 local last_y
 
@@ -21,12 +22,42 @@ As far as I can tell this does have to do with the normals
 
 local function get_player_position_xy(self)
 	local position = go.get_position(self.player) / TILE_SIZE
-	return math.ceil(position.x) - self.offset.x, math.ceil(position.y) - self.offset.y
+	return math.ceil(position.x) - self.offset.x + 1, math.ceil(position.y) - self.offset.y + 1
+end
+
+local group_tiles = 
+{
+	[3] = 1,
+	[4] = 2,
+	[11] = 3,
+	[12] = 4,
+	[19] = 5,
+	[20] = 6,
+	[27] = 7,
+	[28] = 8
+}
+
+local function get_interaction_group(self, x, y)
+	return group_tiles[tilemap.get_tile(self.tileMap, "interaction_number", x, y)]
+end
+
+local function add_door(self, x, y, rot)
+	local position = vmath.vector3(x * TILE_SIZE, y * TILE_SIZE, 16) + self.offset - vmath.vector3(TILE_SIZE/2, TILE_SIZE/2, 0)
+	local interaction_group_tile = get_interaction_group(self, x, y)
+	door(collectionfactory.create("#door_factory", position, rot)[hash("/door")],interaction_group_tile, vmath.vector3(x, y, 0)) --[[@as door]]
+end
+
+---@param rot vector4
+local function add_button(self, x, y, rot)
+	local position = vmath.vector3(x * TILE_SIZE, y * TILE_SIZE, 16) + self.offset - vmath.vector3(TILE_SIZE/2, TILE_SIZE/2, 6)
+	props =
+	{
+		[hash("/button")] = {interaction_group = get_interaction_group(self, x, y)}
+	}
+	local ids = collectionfactory.create("#button_factory", position, rot, props)
 end
 
 function init(self)
-	
-
 	local tx, ty, tw, th = tilemap.get_bounds(self.tileMap)
 
 	self.offset = vmath.vector3(tx, ty, 0)
@@ -34,23 +65,33 @@ function init(self)
 	fow.init(self, tw, th, TILE_SIZE, self.fow)
 	local x, y = get_player_position_xy(self)
     fow.draw(x, y, 22)
-	tilemap.set_visible(self.tileMap, "fruits", false)
+	tilemap.set_visible(self.tileMap, "interactives", false)
 	
 	for y = ty, (th + ty - 1) do
         for x = tx, (tw + tx - 1) do
-            local v = tilemap.get_tile(self.tileMap, "layer1", x, y)
-			local f = tilemap.get_tile(self.tileMap, "fruits", x, y)
-            if v == 1 then
-                fow.set_b(x - tx, y - ty, 255)
+            local v = tilemap.get_tile(self.tileMap, "walls", x, y)
+			local f = tilemap.get_tile(self.tileMap, "interactives", x, y)
+            if v == 35 or f == 41 or f == 18 then
+                fow.set_b(x - tx + 1, y - ty + 1, 255)
             end
 			if f == 17 then
 				local position = vmath.vector3(x * TILE_SIZE, y * TILE_SIZE, 8) + self.offset - vmath.vector3(TILE_SIZE/2, TILE_SIZE/2, 0)
 				collectionfactory.create("#fruit_factory", position)
+			elseif f == 18 then
+				add_door(self, x, y, vmath.quat_rotation_z(0))
+			elseif f == 41 then
+				add_door(self, x, y, vmath.quat_rotation_z(math.pi/2))
+			elseif f == 1 then
+				add_button(self, x, y, vmath.quat_rotation_z(math.pi/2))
+			elseif f == 9 then
+				add_button(self, x, y, vmath.quat_rotation_z(0))
+			elseif f == 2 then
+				add_button(self, x, y, vmath.quat_rotation_z(-(math.pi/2)))
+			elseif f == 10 then
+				add_button(self, x, y, vmath.quat_rotation_z(math.pi))
 			end
         end
     end
-
-	
 end
 
 function final(self)

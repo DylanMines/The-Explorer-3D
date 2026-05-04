@@ -1,33 +1,37 @@
 name: "main"
-instances {
-  id: "bulb"
-  prototype: "/light_and_shadows/props/bulb.go"
-  position {
-    x: 100.125
-    y: 127.75
-    z: 10.0
-  }
-  component_properties {
-    id: "bulb"
-    properties {
-      id: "color"
-      value: "1.0, 0.6, 0.0, 1.0"
-      type: PROPERTY_TYPE_VECTOR4
-    }
-    properties {
-      id: "power"
-      value: "150.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
-  }
-}
 collection_instances {
   id: "player"
   collection: "/Assets/Prefabs/player.collection"
   position {
     x: 68.0
     y: 46.0
-    z: 4.5
+    z: 11.0
+  }
+  instance_properties {
+    id: "player"
+    properties {
+      id: "move"
+      properties {
+        id: "speed"
+        value: "80.0"
+        type: PROPERTY_TYPE_NUMBER
+      }
+    }
+  }
+}
+collection_instances {
+  id: "torch"
+  collection: "/Assets/Prefabs/torch.collection"
+  position {
+    x: 36.7
+    y: 69.0
+    z: 6.0
+  }
+  rotation {
+    x: 0.5032892
+    y: 0.49668893
+    z: 0.496689
+    w: 0.5032892
   }
 }
 scale_along_z: 1
@@ -54,7 +58,7 @@ embedded_instances {
   "  }\n"
   "  properties {\n"
   "    id: \"fog_min_max\"\n"
-  "    value: \"20.0, 50.0, 1.0, 1.0\"\n"
+  "    value: \"35.0, 70.0, 1.0, 1.0\"\n"
   "    type: PROPERTY_TYPE_VECTOR4\n"
   "  }\n"
   "  properties {\n"
@@ -98,6 +102,18 @@ embedded_instances {
   "  data: \"prototype: \\\"/Assets/Prefabs/fruit.collection\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"door_factory\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/Assets/Prefabs/door.collection\\\"\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"button_factory\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/Assets/Prefabs/button.collection\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {
@@ -107,7 +123,7 @@ embedded_instances {
   "  type: \"mesh\"\n"
   "  data: \"material: \\\"/light_and_shadows/materials/model/model_local.material\\\"\\n"
   "vertices: \\\"/Assets/Meshes/quad.buffer\\\"\\n"
-  "textures: \\\"/Assets/Images/tiles.png\\\"\\n"
+  "textures: \\\"/Assets/Images/tilemap.png\\\"\\n"
   "textures: \\\"\\\"\\n"
   "textures: \\\"/Assets/Images/empty.png\\\"\\n"
   "position_stream: \\\"position\\\"\\n"
@@ -116,7 +132,7 @@ embedded_instances {
   "}\n"
   ""
   position {
-    z: 16.0
+    z: 32.0
   }
 }
 embedded_instances {
@@ -125,13 +141,18 @@ embedded_instances {
   "  id: \"script\"\n"
   "  component: \"/orthographic/camera.script\"\n"
   "  properties {\n"
+  "    id: \"near_z\"\n"
+  "    value: \"-40.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
   "    id: \"far_z\"\n"
   "    value: \"1000.0\"\n"
   "    type: PROPERTY_TYPE_NUMBER\n"
   "  }\n"
   "  properties {\n"
   "    id: \"zoom\"\n"
-  "    value: \"13.0\"\n"
+  "    value: \"7.0\"\n"
   "    type: PROPERTY_TYPE_NUMBER\n"
   "  }\n"
   "  properties {\n"
@@ -155,7 +176,7 @@ embedded_instances {
   "  type: \"camera\"\n"
   "  data: \"aspect_ratio: 1.0\\n"
   "fov: 0.7854\\n"
-  "near_z: 0.1\\n"
+  "near_z: -20.0\\n"
   "far_z: 1000.0\\n"
   "orthographic_projection: 1\\n"
   "orthographic_zoom: 4.0\\n"
@@ -206,7 +227,7 @@ embedded_instances {
   id: "Tile"
   data: "components {\n"
   "  id: \"Test\"\n"
-  "  component: \"/Assets/Tilemaps/Test.tilemap\"\n"
+  "  component: \"/Assets/Tilemaps/Test2.tilemap\"\n"
   "  position {\n"
   "    z: 1.0\n"
   "  }\n"
@@ -223,13 +244,14 @@ embedded_instances {
   "embedded_components {\n"
   "  id: \"collisionobject\"\n"
   "  type: \"collisionobject\"\n"
-  "  data: \"collision_shape: \\\"/Assets/Tilemaps/Test.tilemap\\\"\\n"
+  "  data: \"collision_shape: \\\"/Assets/Tilemaps/Test2.tilemap\\\"\\n"
   "type: COLLISION_OBJECT_TYPE_STATIC\\n"
   "mass: 0.0\\n"
   "friction: 0.1\\n"
   "restitution: 0.5\\n"
   "group: \\\"default\\\"\\n"
   "mask: \\\"default\\\"\\n"
+  "mask: \\\"fruit\\\"\\n"
   "\"\n"
   "}\n"
   ""

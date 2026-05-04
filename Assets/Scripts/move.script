@@ -55,7 +55,8 @@ function update(self, dt)
 	else
 		footsteps.stop(sound_object)
 	end
-	go.set_position(go.get_position() + self.input * dt * self.speed)
+	local pos = go.get_position()
+	go.set_position(pos + self.input * dt * self.speed)
 	self.correction = vmath.vector3()
 	self.input = vmath.vector3()
 end
@@ -63,7 +64,7 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("trigger_response") then
-		if message.other_group == hash("fruit") and not self.holding then
+		if message.other_group == hash("fruit_trigger") and not self.holding then
 			local data = {}
 			if message.enter then
 				data.key = "e"
