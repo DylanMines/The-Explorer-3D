@@ -1,0 +1,18 @@
+tile_set: "/Assets/Tilemaps/map_source.tilesource"
+layers {
+  id: "floor"
+  z: 0.0
+}
+layers {
+  id: "walls"
+  z: 0.1
+}
+layers {
+  id: "interactives"
+  z: 0.2
+}
+layers {
+  id: "interaction_number"
+  z: 0.4
+}
+material: "/light_and_shadows/materials/tilemap_bg.material"

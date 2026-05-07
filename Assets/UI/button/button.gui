@@ -1,0 +1,88 @@
+fonts {
+  name: "Arco"
+  font: "/Assets/Fonts/Arco.font"
+}
+textures {
+  name: "druid"
+  texture: "/druid/druid.atlas"
+}
+nodes {
+  size {
+    x: 100.0
+    y: 100.0
+  }
+  type: TYPE_BOX
+  id: "root"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    y: -58.0
+  }
+  size {
+    x: 200.0
+    y: 20.0
+  }
+  color {
+    x: 0.8
+    y: 0.8
+    z: 0.8
+  }
+  type: TYPE_BOX
+  texture: "druid/ui_circle_16"
+  id: "button"
+  pivot: PIVOT_S
+  parent: "root"
+  inherit_alpha: true
+  slice9 {
+    x: 8.0
+    y: 8.0
+    z: 8.0
+    w: 8.0
+  }
+}
+nodes {
+  position {
+    y: 58.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_BOX
+  texture: "druid/ui_circle_16"
+  id: "button_front"
+  parent: "button"
+  inherit_alpha: true
+  slice9 {
+    x: 8.0
+    y: 8.0
+    z: 8.0
+    w: 8.0
+  }
+}
+nodes {
+  scale {
+    x: 0.8
+    y: 0.8
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "<text>"
+  font: "Arco"
+  id: "text"
+  parent: "button_front"
+  inherit_alpha: true
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

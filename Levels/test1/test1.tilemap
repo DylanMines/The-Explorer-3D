@@ -1,0 +1,148 @@
+tile_set: "/Assets/Tilemaps/map_source.tilesource"
+layers {
+  id: "floor"
+  z: 0.0
+  cell {
+    x: 1
+    y: 1
+    tile: 35
+  }
+  cell {
+    x: 2
+    y: 1
+    tile: 35
+  }
+  cell {
+    x: 3
+    y: 1
+    tile: 35
+  }
+  cell {
+    x: 4
+    y: 1
+    tile: 35
+  }
+  cell {
+    x: 5
+    y: 1
+    tile: 35
+  }
+  cell {
+    x: 6
+    y: 2
+    tile: 35
+  }
+}
+layers {
+  id: "walls"
+  z: 0.1
+  cell {
+    x: 0
+    y: 0
+    tile: 34
+  }
+  cell {
+    x: 1
+    y: 0
+    tile: 34
+  }
+  cell {
+    x: 2
+    y: 0
+    tile: 34
+  }
+  cell {
+    x: 3
+    y: 0
+    tile: 34
+  }
+  cell {
+    x: 4
+    y: 0
+    tile: 34
+  }
+  cell {
+    x: 5
+    y: 0
+    tile: 34
+  }
+  cell {
+    x: 6
+    y: 0
+    tile: 34
+  }
+  cell {
+    x: 0
+    y: 1
+    tile: 34
+  }
+  cell {
+    x: 6
+    y: 1
+    tile: 34
+  }
+  cell {
+    x: 0
+    y: 2
+    tile: 34
+  }
+  cell {
+    x: 1
+    y: 2
+    tile: 34
+  }
+  cell {
+    x: 2
+    y: 2
+    tile: 34
+  }
+  cell {
+    x: 3
+    y: 2
+    tile: 34
+  }
+  cell {
+    x: 4
+    y: 2
+    tile: 34
+  }
+  cell {
+    x: 5
+    y: 2
+    tile: 34
+  }
+  cell {
+    x: 6
+    y: 2
+    tile: 34
+  }
+  cell {
+    x: 31
+    y: 31
+    tile: 18
+  }
+}
+layers {
+  id: "interactives"
+  z: 0.2
+  cell {
+    x: 1
+    y: 1
+    tile: 41
+  }
+  cell {
+    x: 3
+    y: 1
+    tile: 32
+  }
+  cell {
+    x: 5
+    y: 1
+    tile: 49
+  }
+}
+layers {
+  id: "interaction_number"
+  z: 0.4
+}
+material: "/light_and_shadows/materials/tilemap_bg.material"

@@ -23,7 +23,7 @@ embedded_instances {
   "    count: 3\\n"
   "  }\\n"
   "  data: 16.0\\n"
-  "  data: 10.0\\n"
+  "  data: 8.5\\n"
   "  data: 10.0\\n"
   "}\\n"
   "\"\n"
@@ -50,7 +50,7 @@ embedded_instances {
   ""
   scale3 {
     x: 32.0
-    y: 20.0
+    y: 17.0
     z: 32.0
   }
 }

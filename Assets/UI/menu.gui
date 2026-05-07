@@ -1,0 +1,127 @@
+script: "/Assets/UI/menu.gui_script"
+nodes {
+  position {
+    x: 960.0
+    y: 540.0
+  }
+  size {
+    x: 1920.0
+    y: 1080.0
+  }
+  color {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
+  type: TYPE_BOX
+  id: "background"
+  adjust_mode: ADJUST_MODE_STRETCH
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 938.0
+    y: 682.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  type: TYPE_TEMPLATE
+  id: "play"
+  inherit_alpha: true
+  template: "/Assets/UI/button/button.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "play/root"
+  parent: "play"
+  template_node_child: true
+}
+nodes {
+  color {
+    x: 0.0
+    y: 0.5019608
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "play/button"
+  parent: "play/root"
+  overridden_fields: 5
+  template_node_child: true
+}
+nodes {
+  color {
+    x: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "play/button_front"
+  parent: "play/button"
+  overridden_fields: 5
+  template_node_child: true
+}
+nodes {
+  type: TYPE_TEXT
+  text: "Play"
+  id: "play/text"
+  parent: "play/button_front"
+  overridden_fields: 5
+  overridden_fields: 8
+  template_node_child: true
+}
+nodes {
+  position {
+    x: 938.0
+    y: 392.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  type: TYPE_TEMPLATE
+  id: "quit"
+  inherit_alpha: true
+  template: "/Assets/UI/button/button.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "quit/root"
+  parent: "quit"
+  template_node_child: true
+}
+nodes {
+  color {
+    x: 0.5019608
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "quit/button"
+  parent: "quit/root"
+  overridden_fields: 5
+  template_node_child: true
+}
+nodes {
+  color {
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "quit/button_front"
+  parent: "quit/button"
+  overridden_fields: 5
+  template_node_child: true
+}
+nodes {
+  type: TYPE_TEXT
+  text: "quit"
+  id: "quit/text"
+  parent: "quit/button_front"
+  overridden_fields: 5
+  overridden_fields: 8
+  template_node_child: true
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

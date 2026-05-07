@@ -1,11 +1,14 @@
 local fow = require 'light_and_shadows.fow'
 local light = require 'light_and_shadows.light'
 local door = require("Assets.Scripts.door")
+local mtool = require("Assets.Scripts.mtool")
+local events = require("event.events")
 
 go.property("fow", resource.texture(""))
-go.property("tileMap", msg.url())
 go.property("player", msg.url())
 go.property("camera_go_id", msg.url())
+go.property("Model", msg.url())
+go.property("level_changer", msg.url())
 
 local TILE_SIZE = 32
 local last_x
@@ -19,6 +22,8 @@ rest of the light stuff to work on the xy place aswell.
 As far as I can tell this does have to do with the normals
 
 ]]
+
+local generated_models = {}
 
 local function get_player_position_xy(self)
 	local position = go.get_position(self.player) / TILE_SIZE
@@ -37,6 +42,18 @@ local group_tiles =
 	[28] = 8
 }
 
+local interaction_colors = 
+{
+	vmath.vector3(0.6, 1, 0.6),
+	vmath.vector3(0.6, 1, 1),
+	vmath.vector3(1, 1, 0.6),
+	vmath.vector3(1, 0.6, 1),
+	vmath.vector3(0.6, 0.6, 1),
+	vmath.vector3(1, 0.6, 0.6),
+	vmath.vector3(0.8, 0.6, 1),
+	vmath.vector3(0.6, 1, 0.8),
+}
+
 local function get_interaction_group(self, x, y)
 	return group_tiles[tilemap.get_tile(self.tileMap, "interaction_number", x, y)]
 end
@@ -45,16 +62,25 @@ local function get_center_position(self, x, y)
 	return vmath.vector3(x * TILE_SIZE, y * TILE_SIZE, 16) - vmath.vector3(TILE_SIZE/2, TILE_SIZE/2, 0)
 end
 
+local function set_color(self, id, group)
+	local color = interaction_colors[group]
+	go.set(id, "tint", vmath.vector4(color.x, color.y, color.z, 1))
+end
+
 local function add_door(self, x, y, rot)
 	local position = get_center_position(self, x, y)
 	local interaction_group_tile = get_interaction_group(self, x, y)
-	door(collectionfactory.create("#door_factory", position, rot)[hash("/door")],interaction_group_tile, vmath.vector3(x, y, 0)) --[[@as door]]
+	local ids = collectionfactory.create("#door_factory", position, rot)
+	table.insert(generated_models, ids)
+	door(ids[hash("/door")],interaction_group_tile, vmath.vector3(x, y, 0)) --[[@as door]]
+    set_color(self, msg.url(nil, ids[hash("/model")], "model"), interaction_group_tile)
 end
 
 local function add_torch(self, x, y, rot)
 	local position = get_center_position(self, x, y) + vmath.vector3(0,0,4)
-	local ids = collectionfactory.create("#torch_factory", position)
-	go.set(ids["/torch"], "euler.z", rot)
+	local ids = collectionfactory.create("#torch_factory", position, rot)
+	table.insert(generated_models, ids)
+	--go.set(ids["/torch"], "euler.z", rot)
 end
 
 ---@param rot vector4
@@ -65,18 +91,20 @@ local function add_button(self, x, y, rot)
 		[hash("/button")] = {interaction_group = get_interaction_group(self, x, y)}
 	}
 	local ids = collectionfactory.create("#button_factory", position, rot, props)
+	set_color(self, msg.url(nil, ids[hash("/model")], "model"), get_interaction_group(self, x, y))
+	table.insert(generated_models, ids)
 end
 
-function init(self)
+local function generate_level(self)
+	print("generating")
 	local tx, ty, tw, th = tilemap.get_bounds(self.tileMap)
 
 	self.offset = vmath.vector3(tx, ty, 0)
-	print(self.offset)
 
 	fow.init(self, tw, th, TILE_SIZE, self.fow)
-	local x, y = get_player_position_xy(self)
-    fow.draw(x, y, 22)
+	
 	tilemap.set_visible(self.tileMap, "interactives", false)
+	tilemap.set_visible(self.tileMap, "interaction_number", false)
 	
 	for y = ty, (th + ty - 1) do
         for x = tx, (tw + tx - 1) do
@@ -101,26 +129,73 @@ function init(self)
 			elseif f == 10 then
 				add_button(self, x, y, vmath.quat_rotation_z(math.pi))
 			elseif f == 25 then
-				add_torch(self, x, y, 90)
+				add_torch(self, x, y, vmath.quat_rotation_z(math.pi/2))
 			elseif f == 33 then
-				add_torch(self, x, y, 0)
+				add_torch(self, x, y, vmath.quat_rotation_z(0))
 			elseif f == 26 then
-				add_torch(self, x, y, -90)
+				add_torch(self, x, y, vmath.quat_rotation_z(-(math.pi/2)))
 			elseif f == 34 then
-				add_torch(self, x, y, 180)
+				add_torch(self, x, y, vmath.quat_rotation_z(math.pi))
+			elseif f ==50 then
+				self.exit_pos = vmath.vector3(x, y, 0)
+			elseif f == 42 then
+				go.set_position(get_center_position(self, x, y) - vmath.vector3(0, 0, 6), self.player) 
 			end
         end
     end
+
+	local x, y = get_player_position_xy(self)
+    fow.draw(x, y, 10)
+
+	local options = {
+		tilemap = self.tileMap,
+		layer = "walls", -- Tilemap layer name.
+		w = 8, -- Horizontal number of tiles in tileset (texture atlas).
+		h = 8, -- Vertical number of tiles in tileset (texture atlas).
+		tilesize = 32, -- Size of tile in pixels (it will be use as scale factor when a script generates quads).
+
+		optimize = false, -- If 'true' a script will culling the hidden by neighbors faces (edges 2,3,4,5).
+		optimize_back = false -- If 'true' a script will culling back face (6) for all tiles.
+	}
+    
+    self.grid = mtool.create_mesh_from_tilemap(self.Model, options)
+
+end
+
+function init(self)
+	self.exit_pos = vmath.vector3()
+	self.loaded = false
 end
 
 function final(self)
 	fow.final(self)
 end
 
+function clear(self)
+	print("clearing")
+	for _, v in pairs(generated_models) do
+		for _, j in pairs(v) do
+			go.delete(j, true)
+		end
+	end
+	if self.tileMap then
+		go.delete(self.tileMap, false)
+	end
+	door.clear()
+	generated_models = {}
+	self.tileMap = nil
+end
+
 function update(self, dt)
+	if not self.loaded then return end
 	
 	local x, y = get_player_position_xy(self)
-	fow.draw(x, y, 5)
+	if x == self.exit_pos.x and y == self.exit_pos.y then
+		msg.post(self.level_changer, "load_next")
+		self.exit_pos = vmath.vector3()
+		self.loaded = false
+	end
+	fow.draw(x, y, 7)
 	if last_x then
 		fow.set_g(last_x, last_y, 0)
 	end
@@ -130,7 +205,7 @@ function update(self, dt)
 	--fow.set_g(x, y, 255)
 	if fow.update(self, dt) then
         -- dirty frame. Need to update textures. 
-        local res = go.get("/minimap#sprite", "texture0")
+        local res = go.get("minimap#sprite", "texture0")
         -- local res = go.get("/ui#ui",  "textures", {key = "fow"})
         -- print(res)
         fow.set_texture(res)
@@ -139,6 +214,27 @@ function update(self, dt)
 	light.set_position(go.get_rotation(self.player), go.get_position(self.player), go.get_world_position(self.camera_go_id))
 end
 
-
-
-
+function on_message(self, message_id, message, sender)
+	if message_id == hash("load") then
+		if message.tilemap then 
+			self.tileMap = message.tilemap
+			generate_level(self)
+			local camera_script = msg.url(nil, self.camera_go_id.path, "script")
+			local lerp = go.get(camera_script, "follow_lerp")
+			go.set(camera_script, "follow_lerp", 1)
+			self.loaded = true
+		
+			timer.delay(0.1, false, function (self, handle, time_elapsed)
+				go.set(camera_script, "follow_lerp", lerp)
+				events.trigger("transition", {begin = false})
+			end)
+		else
+			timer.delay(0.1, false, function (self, handle, time_elapsed)
+				events.trigger("transition", {begin = false})
+			end)
+		end
+	elseif message_id == hash("unload") then
+		self.loaded = false
+		clear(self)
+	end
+end

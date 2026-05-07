@@ -29,9 +29,13 @@ function door.open_all(interaction_num)
     end
 end
 
+function door.clear() -- don't need to deal with game objects since scene controller deletes them for us
+    door.doors = {}
+end
+
 function door:open()
     local pos = go.get_position(self.objectID)
-    go.animate(self.objectID, "position", go.PLAYBACK_ONCE_FORWARD, pos - vmath.vector3(0, 0, 32), go.EASING_LINEAR, 7.6, 0, function ()
+    go.animate(self.objectID, "position", go.PLAYBACK_ONCE_FORWARD, pos - vmath.vector3(0, 0, 33), go.EASING_LINEAR, 7.6, 0, function ()
         fow.set_b(self.position.x, self.position.y, 0)
         msg.post(self.objectID, "disable")
     end)

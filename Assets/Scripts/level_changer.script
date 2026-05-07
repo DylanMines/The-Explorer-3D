@@ -1,0 +1,57 @@
+local events = require("event.events")
+
+local levels = 
+{
+	[1] = {go = "menu", name = "menu"},
+	[2] = {go = "level1", name = "Entrance"},
+	[3] = {go = "level2", name = "Maze"}
+}
+
+local loaded_obj = nil
+
+local index = 1
+
+local function load_level(self, level)
+	events.trigger("transition", {begin = true})
+	timer.delay(0.1, false, function (self, handle, time_elapsed)
+		msg.post("/root#SceneController", "unload")
+		if loaded_obj then
+			go.delete(loaded_obj, true)
+		end
+		--factory.set_prototype("#tile_loader", "/Levels/"..level_string.."/"..level_string..".goc")
+		local id = factory.create("#"..level.go) --[[@as hash]]
+		loaded_obj = id
+		local tilemap = nil
+		if level.go ~= "menu" then
+			tilemap = msg.url(nil, id, "map")
+			events.trigger("change_location", {name = level.name})
+		end
+		msg.post("/root#SceneController", "load", {tilemap = tilemap})
+	end)
+end
+
+function init(self)
+	load_level(self, levels[1])
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("load_next") then
+		index = index + 1
+		if index > #levels then
+			index = 1
+		end
+		load_level(self, levels[index])
+	end
+end
+
+function on_input(self, action_id, action)
+	-- if action_id == hash("e") and action.released then
+	-- 	load_level(self, levels[3])
+	-- end
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Learn more: https://defold.com/manuals/hot-reload/
+	-- Remove this function if not needed
+end

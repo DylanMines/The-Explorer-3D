@@ -11,24 +11,9 @@ textures {
   name: "white_keys"
   texture: "/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/white_keys.atlas"
 }
-nodes {
-  position {
-    x: 1900.0
-    y: 20.0
-  }
-  scale {
-    x: 3.0
-    y: 3.0
-  }
-  type: TYPE_BOX
-  texture: "fow/empty"
-  id: "box"
-  xanchor: XANCHOR_RIGHT
-  yanchor: YANCHOR_BOTTOM
-  pivot: PIVOT_SE
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-  material: "minimap_gui"
+textures {
+  name: "druid"
+  texture: "/druid/druid.atlas"
 }
 nodes {
   position {
@@ -37,6 +22,7 @@ nodes {
   }
   type: TYPE_TEMPLATE
   id: "interaction"
+  layer: "level_content"
   inherit_alpha: true
   template: "/Assets/UI/Interaction/interaction.gui"
 }
@@ -57,6 +43,124 @@ nodes {
   id: "interaction/text"
   parent: "interaction/root"
   template_node_child: true
+}
+nodes {
+  position {
+    x: 960.0
+    y: 540.0
+  }
+  size {
+    x: 1920.0
+    y: 1080.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "transition"
+  adjust_mode: ADJUST_MODE_STRETCH
+  layer: "transition"
+}
+nodes {
+  position {
+    y: -156.0
+  }
+  size {
+    x: 500.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "loading"
+  font: "Arco"
+  id: "text"
+  parent: "transition"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 1890.0
+    y: 30.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  size {
+    x: 68.0
+    y: 68.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  texture: "druid/ui_circle_8"
+  id: "minimap_bg"
+  pivot: PIVOT_SE
+  inherit_alpha: true
+  slice9 {
+    x: 2.0
+    y: 2.0
+    z: 2.0
+    w: 2.0
+  }
+}
+nodes {
+  position {
+    x: -34.0
+    y: 34.0
+  }
+  size {
+    x: 64.0
+    y: 64.0
+  }
+  type: TYPE_BOX
+  texture: "fow/empty"
+  id: "minimap"
+  xanchor: XANCHOR_RIGHT
+  yanchor: YANCHOR_BOTTOM
+  parent: "minimap_bg"
+  layer: "level_content"
+  inherit_alpha: true
+  clipping_mode: CLIPPING_MODE_STENCIL
+  material: "minimap_gui"
+}
+nodes {
+  position {
+    x: 960.0
+    y: 927.0
+  }
+  type: TYPE_TEMPLATE
+  id: "location"
+  inherit_alpha: true
+  template: "/Assets/UI/location/location.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "location/root"
+  parent: "location"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_TEXT
+  id: "location/text"
+  parent: "location/root"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "location/underline"
+  parent: "location/text"
+  template_node_child: true
+}
+layers {
+  name: "level_content"
+}
+layers {
+  name: "transition"
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

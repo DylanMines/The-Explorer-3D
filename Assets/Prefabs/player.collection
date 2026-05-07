@@ -44,7 +44,7 @@ instances {
   prototype: "/light_and_shadows/props/sun.go"
   children: "go"
   position {
-    z: 20.5
+    z: 35.0
   }
   rotation {
     x: 0.70710677
@@ -63,8 +63,8 @@ instances {
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
-      id: "depth_bias"
-      value: "4.0E-4"
+      id: "max_lights"
+      value: "16.0"
       type: PROPERTY_TYPE_NUMBER
     }
   }
@@ -103,7 +103,7 @@ embedded_instances {
   "  component: \"/Assets/Scripts/move.script\"\n"
   "  properties {\n"
   "    id: \"speed\"\n"
-  "    value: \"50.0\"\n"
+  "    value: \"70.0\"\n"
   "    type: PROPERTY_TYPE_NUMBER\n"
   "  }\n"
   "}\n"

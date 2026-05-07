@@ -46,7 +46,8 @@ void main()
     // Add the fog
     frag_color = add_fog(frag_color, var_view_position.z, fog.x, fog.y, fog_color.rgb*color.a, fog_color.a);
 
-    out_fragColor = vec4(frag_color, color.a);
+   out_fragColor = vec4(frag_color, color.a);
+   //out_fragColor = vec4(direct_light, color.a);
 #endif
 }
 

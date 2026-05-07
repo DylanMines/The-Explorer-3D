@@ -2,11 +2,13 @@ local druid = require("druid.druid")
 local events = require("event.events")
 
 local interaction = require("Assets.UI.Interaction.interaction")
+local location = require("Assets.UI.location.location")
 
 function init(self)
     self.druid = druid.new(self)
 
 	self.interaction = self.druid:new_widget(interaction, "interaction")
+	self.location = self.druid:new_widget(location, "location")
 
 	events.subscribe("interact", function(data)
 		if data.key ~= nil then
@@ -14,6 +16,24 @@ function init(self)
 		else
 			self.interaction:hide()
 		end
+	end)
+
+	events.subscribe("transition", function(data)
+		if data.begin then
+			gui.animate(gui.get_node("transition"), "color.w", 1, gui.EASING_LINEAR, 0.1)
+		else
+			gui.animate(gui.get_node("transition"), "color.w", 0, gui.EASING_LINEAR, 0.1)
+			
+		end
+	end)
+
+	events.subscribe("change_location", function (data)
+		timer.delay(0.5, false, function (self, handle, time_elapsed)
+				self.location:show(data.name)
+		end)
+		timer.delay(4, false, function (self, handle, time_elapsed)
+			self.location:hide()
+		end)
 	end)
 end
 

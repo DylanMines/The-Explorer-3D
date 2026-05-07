@@ -32,7 +32,7 @@ go.property("num", -1)
 -- 'Static_spot' - do you need to change spotlight direction in runtime? If 'true' the direction being calculation once
 -- for performance reason.
 
--- Num. Is bulb has a positive number then this light source does not participate in sort by distance from the screen center.
+-- Num. If bulb has a positive number then this light source does not participate in sort by distance from the screen center.
 -- It always is visible. Ofcourse if amount of all bulbs is less than MAX light sources values (X in this demo).
 -- Default value is -1. This bulbs have sorted in the light manager script and you may add bulb as much as you need.
 -- But only first N are going to the shader. 
