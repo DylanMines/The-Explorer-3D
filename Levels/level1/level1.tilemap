@@ -897,6 +897,11 @@ layers {
     tile: 34
   }
   cell {
+    x: 0
+    y: 7
+    tile: 34
+  }
+  cell {
     x: 12
     y: 7
     tile: 34
@@ -919,6 +924,11 @@ layers {
   cell {
     x: 23
     y: 7
+    tile: 34
+  }
+  cell {
+    x: 0
+    y: 8
     tile: 34
   }
   cell {
@@ -1136,6 +1146,16 @@ layers {
     tile: 32
   }
   cell {
+    x: 18
+    y: 3
+    tile: 48
+  }
+  cell {
+    x: 19
+    y: 3
+    tile: 48
+  }
+  cell {
     x: 20
     y: 3
     tile: 40
@@ -1219,6 +1239,16 @@ layers {
 layers {
   id: "interaction_number"
   z: 0.4
+  cell {
+    x: 18
+    y: 3
+    tile: 3
+  }
+  cell {
+    x: 19
+    y: 3
+    tile: 3
+  }
   cell {
     x: 20
     y: 3

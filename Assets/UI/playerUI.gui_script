@@ -1,14 +1,38 @@
 local druid = require("druid.druid")
 local events = require("event.events")
+local tweener = require("tweener.tweener")
+local settings = require("Main.settings")
 
 local interaction = require("Assets.UI.Interaction.interaction")
 local location = require("Assets.UI.location.location")
+
+local function show_prompt(self, prompt, callback)
+	local length = string.len(prompt)
+	tweener.tween(tweener.linear, 0, length, (0.08 * length), function(value, is_final_call)
+		self.prompt_text:set_text(string.sub(prompt, 0, value))
+		if is_final_call and callback then
+			callback()
+		end
+	end)
+end
+
+local function hide_prompt(self, callback)
+	local prompt = self.prompt_text:get_text()
+	local length = string.len(prompt)
+	tweener.tween(tweener.linear, length, 0, (0.03 * length), function(value, is_final_call)
+		self.prompt_text:set_text(string.sub(prompt, 0, value))
+		if is_final_call and callback then
+			callback()
+		end
+	end)
+end
 
 function init(self)
     self.druid = druid.new(self)
 
 	self.interaction = self.druid:new_widget(interaction, "interaction")
 	self.location = self.druid:new_widget(location, "location")
+	self.prompt_text = self.druid:new_text(gui.get_node("prompt"), "", "DOWNSCALE") 
 
 	events.subscribe("interact", function(data)
 		if data.key ~= nil then
@@ -31,8 +55,16 @@ function init(self)
 		timer.delay(0.5, false, function (self, handle, time_elapsed)
 				self.location:show(data.name)
 		end)
-		timer.delay(4, false, function (self, handle, time_elapsed)
+		timer.delay(settings.prompt_time, false, function (self, handle, time_elapsed)
 			self.location:hide()
+		end)
+	end)
+
+	events.subscribe("show_prompt", function (data)
+		show_prompt(self, data.prompt, function ()
+			timer.delay(settings.prompt_time, false, function (self, handle, time_elapsed)
+				hide_prompt(self)
+			end)
 		end)
 	end)
 end

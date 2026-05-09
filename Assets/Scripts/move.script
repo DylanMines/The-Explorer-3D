@@ -74,6 +74,7 @@ function on_message(self, message_id, message, sender)
 				interaction = nil
 			end
 			events.trigger("interact", data)
+			events.trigger("show_prompt", {prompt = "I should pick this up"})
 		end
 	elseif message_id == hash("contact_point_response") then
 		if message.distance > 0 then

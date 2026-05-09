@@ -23,6 +23,8 @@ As far as I can tell this does have to do with the normals
 
 ]]
 
+local played_prompts = {}
+local prompt_locations = {} -- possibly use a "prompt" object which a physics trigger to detect interaction
 local generated_models = {}
 
 local function get_player_position_xy(self)
@@ -139,7 +141,7 @@ local function generate_level(self)
 			elseif f ==50 then
 				self.exit_pos = vmath.vector3(x, y, 0)
 			elseif f == 42 then
-				go.set_position(get_center_position(self, x, y) - vmath.vector3(0, 0, 6), self.player) 
+				go.set_position(get_center_position(self, x, y) - vmath.vector3(0, 0, 6), self.player)
 			end
         end
     end

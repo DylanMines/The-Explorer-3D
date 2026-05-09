@@ -244,81 +244,81 @@ convex_hulls {
 }
 convex_hulls {
   index: 267
-  count: 0
+  count: 13
   collision_group: "default"
 }
 convex_hulls {
-  index: 267
+  index: 280
   count: 16
   collision_group: "default"
 }
 convex_hulls {
-  index: 283
+  index: 296
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 287
+  index: 300
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 291
+  index: 304
   count: 0
   collision_group: "default"
 }
 convex_hulls {
-  index: 291
+  index: 304
   count: 0
   collision_group: "default"
 }
 convex_hulls {
-  index: 291
+  index: 304
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 291
+  index: 304
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 291
+  index: 304
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 291
+  index: 304
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 291
+  index: 304
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 291
+  index: 304
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 291
+  index: 304
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 291
+  index: 304
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 291
+  index: 304
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 291
+  index: 304
   count: 0
   collision_group: ""
 }

@@ -156,6 +156,27 @@ nodes {
   parent: "location/text"
   template_node_child: true
 }
+nodes {
+  position {
+    x: 960.0
+    y: 200.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 600.0
+    y: 200.0
+  }
+  type: TYPE_TEXT
+  font: "Arco"
+  id: "prompt"
+  pivot: PIVOT_N
+  line_break: true
+  layer: "level_content"
+  inherit_alpha: true
+}
 layers {
   name: "level_content"
 }
