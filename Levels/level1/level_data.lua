@@ -28,6 +28,7 @@ M.prompts = {
         events = {
             {text = "Into the unknown..."},
         },
+        skippable = false,
         replayable = true
     }
 }

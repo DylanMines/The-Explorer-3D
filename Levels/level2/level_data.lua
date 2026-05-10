@@ -11,12 +11,13 @@ M.prompts = {
             {text = "only one of them will let you unlock the final door", freeze = true, focus = "door_4"},
             {text = "press 'p' to pause and restart, if needed", freeze = false, focus = "player"}
         },
-        replayable = true
+        replayable = false
     },
     [2] = {
         events = {
             {text = "press 'p' to pause and restart"}
-        }
+        },
+        replayable = true
     }
 }
 

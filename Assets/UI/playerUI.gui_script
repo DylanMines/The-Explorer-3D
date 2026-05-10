@@ -6,19 +6,29 @@ local settings = require("Main.settings")
 local interaction = require("Assets.UI.Interaction.interaction")
 local location = require("Assets.UI.location.location")
 
-local function show_prompt(self, prompt, callback)
+local function show_prompt(self, prompt, callback, skippable)
+	if skippable then
+		self.skip_prompt:set_enabled(true)
+		gui.set_enabled(self.skip_prompt.node, true)
+	end
+	self.prompt_visible = true
 	local length = string.len(prompt)
-	tweener.tween(tweener.linear, 0, length, (0.04 * length), function(value, is_final_call)
+	self.tween = tweener.tween(tweener.linear, 0, length, (0.04 * length), function(value, is_final_call)
 		self.prompt_text:set_text(string.sub(prompt, 0, value))
 		if is_final_call and callback then
+			self.tween = nil
 			callback()
 		end
 	end)
 end
 
 local function hide_prompt(self, callback)
+	self.skip_prompt:set_enabled(false)
+	self.prompt_visible = false
+	gui.set_enabled(self.skip_prompt.node, false)
 	local prompt = self.prompt_text:get_text()
 	local length = string.len(prompt)
+	if length == 0 then return end
 	tweener.tween(tweener.linear, length, 0, (0.01 * length), function(value, is_final_call)
 		self.prompt_text:set_text(string.sub(prompt, 0, value))
 		if is_final_call and callback then
@@ -27,12 +37,28 @@ local function hide_prompt(self, callback)
 	end)
 end
 
+local function skip(self, trigger_event)
+	if self.tween then tweener.cancel(self.tween) end
+	if self.show_handle then timer.cancel(self.show_handle) end
+	self.prompt_text:set_text("")
+	hide_prompt(self)
+	if trigger_event then
+		events.trigger("skip_prompt")
+	end
+end
+
 function init(self)
     self.druid = druid.new(self)
 
 	self.interaction = self.druid:new_widget(interaction, "interaction")
 	self.location = self.druid:new_widget(location, "location")
-	self.prompt_text = self.druid:new_text(gui.get_node("prompt"), "", "DOWNSCALE") 
+	self.prompt_text = self.druid:new_text(gui.get_node("prompt"), "", "DOWNSCALE")
+	self.prompt_visible = false
+	self.skip_prompt = self.druid:new_button("skip_prompt/root", skip, self)
+	self.tween = nil
+	self.show_handle = nil
+	gui.set_enabled(self.skip_prompt.node, false)
+	self.skip_prompt:set_enabled(false)
 
 	events.subscribe("interact", function(data)
 		if data.key ~= nil then
@@ -61,10 +87,15 @@ function init(self)
 	end)
 
 	events.subscribe("show_prompt", function (data)
-		show_prompt(self, data.prompt)
-		timer.delay(settings.prompt_time, false, function (self, handle, time_elapsed)
-			hide_prompt(self)
-		end)
+		if self.prompt_visible then 
+			skip(self)
+		end
+		show_prompt(self, data.prompt, nil, data.skippable)
+		if not data.next then
+			self.show_handle = timer.delay(settings.prompt_time, false, function (self, handle, time_elapsed)
+				hide_prompt(self)
+			end)
+		end
 	end)
 end
 
