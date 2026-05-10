@@ -1,0 +1,69 @@
+local druid = require("druid.druid")
+local light_and_shadows = require("light_and_shadows.light_and_shadows")
+local events = require("event.events")
+
+local function close(self)
+	events.trigger("freeze_player", false)
+	gui.set_enabled(self.root, false)
+	light_and_shadows.blur = false
+	self.open = false
+end
+
+local function open(self)
+	events.trigger("freeze_player", true)
+	gui.set_enabled(self.root, true)
+	light_and_shadows.blur = true
+	self.open = true
+end
+
+local function restart(self)
+	msg.post("/level_changer#level_changer", "reload_level")
+	close(self)
+end
+
+local function menu(self)
+	close(self)
+	msg.post("/level_changer#level_changer", "load_level", {level_index = 1})
+end
+
+local function resume(self)
+	close(self)
+end
+
+
+function init(self)
+	self.druid = druid.new(self)
+
+	self.open = false
+	
+	self.menu = self.druid:new_button("menu/root", menu, self)
+	self.restart = self.druid:new_button("restart/root", restart, self)
+	self.resume = self.druid:new_button("resume/root", resume, self)
+
+	self.root = gui.get_node("background_color")
+	events.subscribe("pause_menu", function (self)
+		if not self.open then
+			open(self)
+		else
+			close(self)
+		end
+	end, self)
+
+	close(self)
+end
+
+function final(self)
+	self.druid:final()
+end
+
+function update(self, dt)
+	self.druid:update(dt)
+end
+
+function on_message(self, message_id, message, sender)
+	self.druid:on_message(message_id, message, sender)
+end
+
+function on_input(self, action_id, action)
+	return self.druid:on_input(action_id, action)
+end

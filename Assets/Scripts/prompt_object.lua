@@ -21,6 +21,7 @@ function prompt_object.clear()
 end
 
 function prompt_object.interact(objectID)
+    --pprint(prompt_object.prompt_objects)
     prompt.play_num(prompt_object.prompt_objects[objectID].interaction_num)
 end
 

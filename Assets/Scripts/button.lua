@@ -32,8 +32,8 @@ function button.interact(interaction_num, other_id)
         return
     end
     button.activated = true
-    sound.play("#click")
-    sound.play("#door")
+    sound.play("/root#click")
+    sound.play("/root#door")
     camera.shake(nil, 0.001, 7.6)
     door.open_all(interaction_num)
     go.delete(other_id, true)
@@ -58,6 +58,9 @@ function button.get_object_ID(interaction_num)
 end
 
 function button.clear() -- don't need to deal with game objects since scene controller deletes them for us
+    sound.stop("#click")
+    sound.stop("#door")
+    camera.stop_shaking(nil)
     button.buttons = {}
 end
 

@@ -1,19 +1,24 @@
 local events = require("event.events")
 
--- local levels = 
--- {
--- 	"menu",
--- 	"level1",
--- 	"level2"
--- }
 local levels = 
 {
-	"test1"
+	"menu",
+	"level1",
+	"level2",
+	"level3"
 }
+-- local levels = 
+-- {
+-- 	"test1"
+-- }
 
 local loaded_obj = nil
 
 local index = 1
+
+local function unload_factory(self, level)
+	factory.unload("#"..level) --[[@as hash]]
+end
 
 local function load_level(self, level)
 	events.trigger("transition", {begin = true})
@@ -39,8 +44,18 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("load_next") then
+		unload_factory(self, levels[index])
 		index = index + 1
 		if index > #levels then
+			index = 1
+		end
+		load_level(self, levels[index])
+	elseif message_id == hash("reload_level") then
+		load_level(self, levels[index])
+	elseif message_id == hash("load_level") then
+		unload_factory(self, levels[index])
+		index = message.level_index
+		if index == nil or index > #levels then
 			index = 1
 		end
 		load_level(self, levels[index])

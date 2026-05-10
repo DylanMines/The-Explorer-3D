@@ -16,7 +16,11 @@ key_trigger {
 }
 key_trigger {
   input: KEY_E
-  action: "e"
+  action: "action"
+}
+key_trigger {
+  input: KEY_P
+  action: "pause"
 }
 mouse_trigger {
   input: MOUSE_BUTTON_1

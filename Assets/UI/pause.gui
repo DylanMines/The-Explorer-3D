@@ -1,0 +1,242 @@
+script: "/Assets/UI/pause.gui_script"
+fonts {
+  name: "Arco"
+  font: "/Assets/Fonts/Arco.font"
+}
+textures {
+  name: "druid"
+  texture: "/druid/druid.atlas"
+}
+nodes {
+  position {
+    x: 960.0
+    y: 333.0
+  }
+  size {
+    x: 310.0
+    y: 32.0
+  }
+  color {
+    x: 0.6
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  texture: "druid/ui_circle_32"
+  id: "background_color"
+  inherit_alpha: true
+  slice9 {
+    x: 16.0
+    y: 16.0
+    z: 16.0
+    w: 16.0
+  }
+}
+nodes {
+  position {
+    y: 247.0
+  }
+  size {
+    x: 310.0
+    y: 510.0
+  }
+  color {
+    x: 0.8
+    y: 0.2
+    z: 0.2
+  }
+  type: TYPE_BOX
+  texture: "druid/ui_circle_32"
+  id: "background"
+  parent: "background_color"
+  inherit_alpha: true
+  slice9 {
+    x: 16.0
+    y: 16.0
+    z: 16.0
+    w: 16.0
+  }
+}
+nodes {
+  size {
+    x: 300.0
+    y: 500.0
+  }
+  color {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
+  type: TYPE_BOX
+  texture: "druid/ui_circle_32"
+  id: "container"
+  parent: "background"
+  inherit_alpha: true
+  slice9 {
+    x: 16.0
+    y: 16.0
+    z: 16.0
+    w: 16.0
+  }
+}
+nodes {
+  position {
+    y: 231.0
+  }
+  size {
+    x: 250.0
+    y: 50.0
+  }
+  type: TYPE_TEXT
+  text: "Paused"
+  font: "Arco"
+  id: "text"
+  pivot: PIVOT_N
+  parent: "container"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    y: -155.0
+  }
+  type: TYPE_TEMPLATE
+  id: "resume"
+  parent: "container"
+  inherit_alpha: true
+  template: "/Assets/UI/button/button.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "resume/root"
+  parent: "resume"
+  template_node_child: true
+}
+nodes {
+  color {
+    x: 0.0
+    y: 0.5019608
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "resume/button"
+  parent: "resume/root"
+  overridden_fields: 5
+  template_node_child: true
+}
+nodes {
+  color {
+    x: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "resume/button_front"
+  parent: "resume/button"
+  overridden_fields: 5
+  template_node_child: true
+}
+nodes {
+  type: TYPE_TEXT
+  text: "resume game"
+  id: "resume/text"
+  parent: "resume/button_front"
+  overridden_fields: 5
+  overridden_fields: 8
+  template_node_child: true
+}
+nodes {
+  position {
+    y: 85.0
+  }
+  type: TYPE_TEMPLATE
+  id: "menu"
+  parent: "container"
+  inherit_alpha: true
+  template: "/Assets/UI/button/button.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "menu/root"
+  parent: "menu"
+  template_node_child: true
+}
+nodes {
+  color {
+    x: 0.5019608
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "menu/button"
+  parent: "menu/root"
+  overridden_fields: 5
+  template_node_child: true
+}
+nodes {
+  color {
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "menu/button_front"
+  parent: "menu/button"
+  overridden_fields: 5
+  template_node_child: true
+}
+nodes {
+  type: TYPE_TEXT
+  text: "main menu"
+  id: "menu/text"
+  parent: "menu/button_front"
+  overridden_fields: 5
+  overridden_fields: 8
+  template_node_child: true
+}
+nodes {
+  position {
+    y: -35.0
+  }
+  type: TYPE_TEMPLATE
+  id: "restart"
+  parent: "container"
+  inherit_alpha: true
+  template: "/Assets/UI/button/button.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "restart/root"
+  parent: "restart"
+  template_node_child: true
+}
+nodes {
+  color {
+    x: 0.5019608
+    y: 0.0
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "restart/button"
+  parent: "restart/root"
+  overridden_fields: 5
+  template_node_child: true
+}
+nodes {
+  color {
+    y: 0.0
+  }
+  type: TYPE_BOX
+  id: "restart/button_front"
+  parent: "restart/button"
+  overridden_fields: 5
+  template_node_child: true
+}
+nodes {
+  type: TYPE_TEXT
+  text: "restart level"
+  id: "restart/text"
+  parent: "restart/button_front"
+  overridden_fields: 5
+  overridden_fields: 8
+  template_node_child: true
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

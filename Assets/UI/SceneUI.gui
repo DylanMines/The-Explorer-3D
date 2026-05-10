@@ -88,8 +88,8 @@ nodes {
     y: 4.0
   }
   size {
-    x: 68.0
-    y: 68.0
+    x: 70.0
+    y: 70.0
   }
   color {
     x: 0.5019608
@@ -102,16 +102,16 @@ nodes {
   pivot: PIVOT_SE
   inherit_alpha: true
   slice9 {
-    x: 2.0
-    y: 2.0
-    z: 2.0
-    w: 2.0
+    x: 4.0
+    y: 4.0
+    z: 4.0
+    w: 4.0
   }
 }
 nodes {
   position {
-    x: -34.0
-    y: 34.0
+    x: -35.0
+    y: 35.0
   }
   size {
     x: 64.0

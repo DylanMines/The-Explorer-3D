@@ -38,8 +38,9 @@ function prompt:play()
     self.played = true
     local num_events = #self.data.events
     local index = 1
+    local extra_time = 0.3
     
-    local handle = timer.delay(settings.prompt_time + 0.2, true, function (self, handle, time_elapsed)
+    local handle = timer.delay(settings.prompt_time + extra_time, true, function (self, handle, time_elapsed)
         if index > num_events then
             events.trigger("camera_follow", {target = "player"})
             events.trigger("freeze_player", false)
@@ -48,6 +49,7 @@ function prompt:play()
             return
         end
         local event = data.events[index]
+        extra_time = (0.1 * string.len(event.text))
         events.trigger("show_prompt", {prompt = event.text})
         if event.focus then
             events.trigger("camera_follow", {target = event.focus})

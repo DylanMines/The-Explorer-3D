@@ -28,7 +28,7 @@ local BUFFER_RESOLUTION = 2048 -- Size of shadow map. Select value from: 1024/20
 -- Projection resolution of shadow map to the game world. Smaller size is better shadow quality,
 -- but shadows will cast only around the screen center (or a point that camera looks at).
 -- This value also depends on camera zoom. Feel free to adjust it.
-local PROJECTION_RESOLUTION = 400 
+local PROJECTION_RESOLUTION = 300
 
 local rt_list = {}
 light_and_shadows.rt_list = rt_list
