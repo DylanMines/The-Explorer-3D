@@ -21,6 +21,13 @@ function door.new(objectID, interaction_num, position)
     return self
 end
 
+---Returns the location of the first door in the `interaction_num` group
+---@param interaction_num number
+---@return vector3
+function door.get_object_ID(interaction_num)
+    return door.doors[interaction_num][1].objectID
+end
+
 ---@param interaction_num integer
 function door.open_all(interaction_num)
     if door.doors[interaction_num] == nil then print(interaction_num); return end

@@ -14,7 +14,7 @@ instances {
     id: "bulb"
     properties {
       id: "power"
-      value: "400.0"
+      value: "200.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
@@ -28,14 +28,14 @@ instances {
       type: PROPERTY_TYPE_BOOLEAN
     }
     properties {
-      id: "angle"
-      value: "30.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
-    properties {
       id: "static_spot"
       value: "false"
       type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "num"
+      value: "1.0"
+      type: PROPERTY_TYPE_NUMBER
     }
   }
 }
@@ -78,14 +78,14 @@ instances {
   component_properties {
     id: "bulb"
     properties {
-      id: "power"
-      value: "50.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
-    properties {
       id: "static"
       value: "false"
       type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "num"
+      value: "2.0"
+      type: PROPERTY_TYPE_NUMBER
     }
   }
 }
@@ -117,6 +117,7 @@ embedded_instances {
   "group: \\\"default\\\"\\n"
   "mask: \\\"default\\\"\\n"
   "mask: \\\"fruit_trigger\\\"\\n"
+  "mask: \\\"prompt\\\"\\n"
   "embedded_collision_shape {\\n"
   "  shapes {\\n"
   "    shape_type: TYPE_SPHERE\\n"
@@ -127,7 +128,7 @@ embedded_instances {
   "    index: 0\\n"
   "    count: 1\\n"
   "  }\\n"
-  "  data: 4.0\\n"
+  "  data: 8.019615\\n"
   "}\\n"
   "\"\n"
   "}\n"

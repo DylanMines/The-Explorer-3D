@@ -1,8 +1,10 @@
 go.property("speed", 0)
+go.property("frozen", false)
 
 local events = require("event.events")
 local sound_object = "sounds"
 local footsteps = require("Assets.Scripts.footsteps")
+local prompt_object = require("Assets.Scripts.prompt_object")
 
 local function throw(self)
 	local r = go.get_rotation()
@@ -41,6 +43,12 @@ function init(self)
 end
 
 function update(self, dt)
+	self.correction = vmath.vector3()
+	if self.frozen then 
+		footsteps.stop(sound_object)
+		return
+	end
+
 	if vmath.length_sqr(self.input) > 1 then
 		self.input = vmath.normalize(self.input)
 	end
@@ -57,7 +65,6 @@ function update(self, dt)
 	end
 	local pos = go.get_position()
 	go.set_position(pos + self.input * dt * self.speed)
-	self.correction = vmath.vector3()
 	self.input = vmath.vector3()
 end
 
@@ -74,7 +81,8 @@ function on_message(self, message_id, message, sender)
 				interaction = nil
 			end
 			events.trigger("interact", data)
-			events.trigger("show_prompt", {prompt = "I should pick this up"})
+		elseif message.other_group == hash("prompt") then
+			prompt_object.interact(message.other_id)
 		end
 	elseif message_id == hash("contact_point_response") then
 		if message.distance > 0 then
@@ -88,6 +96,9 @@ function on_message(self, message_id, message, sender)
 				self.correction = self.correction + comp
 			end
 		end
+	elseif message_id == hash("drop") then
+		self.holding = nil
+		self.interaction = nil
 	end
 end
 

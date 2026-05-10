@@ -8,7 +8,7 @@ local location = require("Assets.UI.location.location")
 
 local function show_prompt(self, prompt, callback)
 	local length = string.len(prompt)
-	tweener.tween(tweener.linear, 0, length, (0.08 * length), function(value, is_final_call)
+	tweener.tween(tweener.linear, 0, length, (0.06 * length), function(value, is_final_call)
 		self.prompt_text:set_text(string.sub(prompt, 0, value))
 		if is_final_call and callback then
 			callback()
@@ -19,7 +19,7 @@ end
 local function hide_prompt(self, callback)
 	local prompt = self.prompt_text:get_text()
 	local length = string.len(prompt)
-	tweener.tween(tweener.linear, length, 0, (0.03 * length), function(value, is_final_call)
+	tweener.tween(tweener.linear, length, 0, (0.02 * length), function(value, is_final_call)
 		self.prompt_text:set_text(string.sub(prompt, 0, value))
 		if is_final_call and callback then
 			callback()

@@ -138,6 +138,21 @@ layers {
     tile: 35
   }
   cell {
+    x: 27
+    y: 3
+    tile: 35
+  }
+  cell {
+    x: 28
+    y: 3
+    tile: 35
+  }
+  cell {
+    x: 29
+    y: 3
+    tile: 35
+  }
+  cell {
     x: 10
     y: 4
     tile: 35
@@ -617,6 +632,21 @@ layers {
     tile: 34
   }
   cell {
+    x: 27
+    y: 2
+    tile: 34
+  }
+  cell {
+    x: 28
+    y: 2
+    tile: 34
+  }
+  cell {
+    x: 29
+    y: 2
+    tile: 34
+  }
+  cell {
     x: 8
     y: 3
     tile: 34
@@ -698,6 +728,21 @@ layers {
   }
   cell {
     x: 26
+    y: 4
+    tile: 34
+  }
+  cell {
+    x: 27
+    y: 4
+    tile: 34
+  }
+  cell {
+    x: 28
+    y: 4
+    tile: 34
+  }
+  cell {
+    x: 29
     y: 4
     tile: 34
   }
@@ -1118,8 +1163,22 @@ layers {
   }
 }
 layers {
-  id: "interactives"
+  id: "spawns"
   z: 0.2
+  cell {
+    x: 24
+    y: 3
+    tile: 49
+  }
+  cell {
+    x: 1
+    y: 8
+    tile: 41
+  }
+}
+layers {
+  id: "interactives"
+  z: 0.3
   cell {
     x: 13
     y: 2
@@ -1161,9 +1220,9 @@ layers {
     tile: 40
   }
   cell {
-    x: 24
+    x: 21
     y: 3
-    tile: 49
+    tile: 48
   }
   cell {
     x: 19
@@ -1179,6 +1238,11 @@ layers {
     x: 11
     y: 5
     tile: 25
+  }
+  cell {
+    x: 20
+    y: 6
+    tile: 48
   }
   cell {
     x: 21
@@ -1218,7 +1282,7 @@ layers {
   cell {
     x: 1
     y: 8
-    tile: 41
+    tile: 48
   }
   cell {
     x: 2
@@ -1255,8 +1319,23 @@ layers {
     tile: 2
   }
   cell {
+    x: 21
+    y: 3
+    tile: 11
+  }
+  cell {
+    x: 20
+    y: 6
+    tile: 10
+  }
+  cell {
     x: 22
     y: 7
+    tile: 2
+  }
+  cell {
+    x: 1
+    y: 8
     tile: 2
   }
 }

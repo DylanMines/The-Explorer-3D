@@ -50,28 +50,29 @@ embedded_instances {
   "embedded_components {\n"
   "  id: \"sprite\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"default_animation: \\\"1_white\\\"\\n"
+  "  data: \"default_animation: \\\"splash-orange-hi\\\"\\n"
   "material: \\\"/light_and_shadows/materials/sprite/light_sprite.material\\\"\\n"
+  "size {\\n"
+  "  x: 15.0\\n"
+  "  y: 15.0\\n"
+  "}\\n"
+  "size_mode: SIZE_MODE_MANUAL\\n"
   "textures {\\n"
   "  sampler: \\\"tex0\\\"\\n"
-  "  texture: \\\"/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/white_keys.atlas\\\"\\n"
+  "  texture: \\\"/Assets/Images/button.atlas\\\"\\n"
   "}\\n"
   "textures {\\n"
   "  sampler: \\\"tex1\\\"\\n"
-  "  texture: \\\"/Assets/Images/vector-keyboard-controls/Keyboard Keys/White/white_keys.atlas\\\"\\n"
+  "  texture: \\\"/Assets/Images/button.atlas\\\"\\n"
   "}\\n"
   "\"\n"
   "  position {\n"
-  "    y: 13.9\n"
+  "    y: 11.9\n"
   "    z: 10.0\n"
   "  }\n"
   "  rotation {\n"
   "    x: 0.70710677\n"
   "    w: 0.70710677\n"
-  "  }\n"
-  "  scale {\n"
-  "    x: 0.2\n"
-  "    y: 0.2\n"
   "  }\n"
   "}\n"
   ""
@@ -88,23 +89,25 @@ embedded_instances {
   "  material: \\\"/light_and_shadows/materials/model/model_local.material\\\"\\n"
   "  textures {\\n"
   "    sampler: \\\"tex0\\\"\\n"
-  "    texture: \\\"/Assets/Images/empty_texture_1024x1024.png\\\"\\n"
+  "    texture: \\\"/Assets/Images/brick-wall-2.jpg\\\"\\n"
   "  }\\n"
   "}\\n"
   "\"\n"
   "}\n"
   ""
   position {
-    y: 15.0
+    y: 14.0
     z: 10.0
   }
   rotation {
-    x: -0.70710677
-    w: 0.70710677
+    x: -0.5
+    y: -0.5
+    z: -0.5
+    w: 0.5
   }
   scale3 {
     x: 20.0
     y: 20.0
-    z: 2.0
+    z: 4.0
   }
 }

@@ -72,7 +72,7 @@ embedded_instances {
   "  material: \\\"/light_and_shadows/materials/player.material\\\"\\n"
   "  textures {\\n"
   "    sampler: \\\"tex0\\\"\\n"
-  "    texture: \\\"/Design Docs/Orange door.png\\\"\\n"
+  "    texture: \\\"/Assets/Images/orange.jpg\\\"\\n"
   "  }\\n"
   "}\\n"
   "\"\n"

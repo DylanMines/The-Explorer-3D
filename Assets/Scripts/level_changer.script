@@ -1,15 +1,15 @@
 local events = require("event.events")
 
-local levels = 
-{
-	{go = "menu", name = "menu"},
-	{go = "level1", name = "Entrance"},
-	{go = "level2", name = "Maze"}
-}
 -- local levels = 
 -- {
--- 	{go = "test1", name = "The test chambers"}
+-- 	"menu",
+-- 	"level1",
+-- 	"level2"
 -- }
+local levels = 
+{
+	"test1"
+}
 
 local loaded_obj = nil
 
@@ -23,14 +23,13 @@ local function load_level(self, level)
 			go.delete(loaded_obj, true)
 		end
 		--factory.set_prototype("#tile_loader", "/Levels/"..level_string.."/"..level_string..".goc")
-		local id = factory.create("#"..level.go) --[[@as hash]]
+		local id = factory.create("#"..level) --[[@as hash]]
 		loaded_obj = id
 		local tilemap = nil
-		if level.go ~= "menu" then
+		if level ~= "menu" then
 			tilemap = msg.url(nil, id, "map")
-			events.trigger("change_location", {name = level.name})
 		end
-		msg.post("/root#SceneController", "load", {tilemap = tilemap})
+		msg.post("/root#SceneController", "load", {tilemap = tilemap, level_name = level})
 	end)
 end
 

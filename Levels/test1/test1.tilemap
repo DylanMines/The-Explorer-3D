@@ -28,8 +28,93 @@ layers {
     tile: 35
   }
   cell {
+    x: 1
+    y: 2
+    tile: 35
+  }
+  cell {
+    x: 2
+    y: 2
+    tile: 35
+  }
+  cell {
+    x: 3
+    y: 2
+    tile: 35
+  }
+  cell {
+    x: 4
+    y: 2
+    tile: 35
+  }
+  cell {
+    x: 5
+    y: 2
+    tile: 35
+  }
+  cell {
     x: 6
     y: 2
+    tile: 35
+  }
+  cell {
+    x: 1
+    y: 3
+    tile: 35
+  }
+  cell {
+    x: 2
+    y: 3
+    tile: 35
+  }
+  cell {
+    x: 3
+    y: 3
+    tile: 35
+  }
+  cell {
+    x: 4
+    y: 3
+    tile: 35
+  }
+  cell {
+    x: 5
+    y: 3
+    tile: 35
+  }
+  cell {
+    x: 6
+    y: 3
+    tile: 35
+  }
+  cell {
+    x: 7
+    y: 3
+    tile: 35
+  }
+  cell {
+    x: 1
+    y: 4
+    tile: 35
+  }
+  cell {
+    x: 2
+    y: 4
+    tile: 35
+  }
+  cell {
+    x: 3
+    y: 4
+    tile: 35
+  }
+  cell {
+    x: 4
+    y: 4
+    tile: 35
+  }
+  cell {
+    x: 5
+    y: 4
     tile: 35
   }
 }
@@ -87,33 +172,83 @@ layers {
     tile: 34
   }
   cell {
-    x: 1
+    x: 6
     y: 2
     tile: 34
   }
   cell {
-    x: 2
+    x: 7
     y: 2
     tile: 34
   }
   cell {
-    x: 3
+    x: 8
     y: 2
     tile: 34
   }
   cell {
-    x: 4
-    y: 2
+    x: 0
+    y: 3
     tile: 34
   }
   cell {
-    x: 5
-    y: 2
+    x: 8
+    y: 3
+    tile: 34
+  }
+  cell {
+    x: 0
+    y: 4
     tile: 34
   }
   cell {
     x: 6
-    y: 2
+    y: 4
+    tile: 34
+  }
+  cell {
+    x: 7
+    y: 4
+    tile: 34
+  }
+  cell {
+    x: 8
+    y: 4
+    tile: 34
+  }
+  cell {
+    x: 0
+    y: 5
+    tile: 34
+  }
+  cell {
+    x: 1
+    y: 5
+    tile: 34
+  }
+  cell {
+    x: 2
+    y: 5
+    tile: 34
+  }
+  cell {
+    x: 3
+    y: 5
+    tile: 34
+  }
+  cell {
+    x: 4
+    y: 5
+    tile: 34
+  }
+  cell {
+    x: 5
+    y: 5
+    tile: 34
+  }
+  cell {
+    x: 6
+    y: 5
     tile: 34
   }
   cell {
@@ -123,17 +258,12 @@ layers {
   }
 }
 layers {
-  id: "interactives"
+  id: "spawns"
   z: 0.2
   cell {
     x: 1
     y: 1
     tile: 41
-  }
-  cell {
-    x: 3
-    y: 1
-    tile: 32
   }
   cell {
     x: 5
@@ -142,7 +272,131 @@ layers {
   }
 }
 layers {
+  id: "interactives"
+  z: 0.3
+  cell {
+    x: 3
+    y: 1
+    tile: 16
+  }
+  cell {
+    x: 4
+    y: 1
+    tile: 16
+  }
+  cell {
+    x: 3
+    y: 2
+    tile: 16
+  }
+  cell {
+    x: 4
+    y: 2
+    tile: 16
+  }
+  cell {
+    x: 5
+    y: 2
+    tile: 16
+  }
+  cell {
+    x: 1
+    y: 3
+    tile: 0
+  }
+  cell {
+    x: 6
+    y: 3
+    tile: 40
+  }
+  cell {
+    x: 7
+    y: 3
+    tile: 25
+  }
+  cell {
+    x: 1
+    y: 4
+    tile: 8
+  }
+  cell {
+    x: 2
+    y: 4
+    tile: 32
+  }
+  cell {
+    x: 3
+    y: 4
+    tile: 8
+  }
+  cell {
+    x: 4
+    y: 4
+    tile: 32
+  }
+  cell {
+    x: 5
+    y: 4
+    tile: 8
+  }
+  cell {
+    x: 7
+    y: 5
+    tile: 40
+  }
+  cell {
+    x: 8
+    y: 5
+    tile: 17
+  }
+  cell {
+    x: 9
+    y: 5
+    tile: 17
+  }
+}
+layers {
   id: "interaction_number"
   z: 0.4
+  cell {
+    x: 1
+    y: 3
+    tile: 3
+  }
+  cell {
+    x: 6
+    y: 3
+    tile: 2
+  }
+  cell {
+    x: 1
+    y: 4
+    tile: 10
+  }
+  cell {
+    x: 3
+    y: 4
+    tile: 2
+  }
+  cell {
+    x: 5
+    y: 4
+    tile: 11
+  }
+  cell {
+    x: 7
+    y: 5
+    tile: 3
+  }
+  cell {
+    x: 8
+    y: 5
+    tile: 11
+  }
+  cell {
+    x: 9
+    y: 5
+    tile: 10
+  }
 }
 material: "/light_and_shadows/materials/tilemap_bg.material"
