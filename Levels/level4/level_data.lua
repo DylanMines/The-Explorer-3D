@@ -9,7 +9,8 @@ M.prompts = {
             {text = "It is exceptionally larger than the other maps"},
             {text = "be warned, you cannot save your game"},
             {text = "good luck. If you finish, let me know what you think"}
-        }
+        },
+        skippable = false
     }
 }
 return M

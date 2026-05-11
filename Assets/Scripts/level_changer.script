@@ -3,10 +3,10 @@ local events = require("event.events")
 local levels = 
 {
 	"menu",
-	"level4",
 	"level1",
 	"level2",
-	"level3"
+	"level3",
+	"level4",
 }
 -- local levels = 
 -- {
