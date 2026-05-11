@@ -20755,6 +20755,11 @@ layers {
     tile: 0
   }
   cell {
+    x: 1
+    y: 27
+    tile: 48
+  }
+  cell {
     x: 4
     y: 27
     tile: 33
@@ -20778,6 +20783,16 @@ layers {
     x: 20
     y: 27
     tile: 33
+  }
+  cell {
+    x: 2
+    y: 28
+    tile: 48
+  }
+  cell {
+    x: 1
+    y: 29
+    tile: 48
   }
   cell {
     x: 3
@@ -21477,6 +21492,21 @@ layers {
     x: 37
     y: 26
     tile: 18
+  }
+  cell {
+    x: 1
+    y: 27
+    tile: 2
+  }
+  cell {
+    x: 2
+    y: 28
+    tile: 2
+  }
+  cell {
+    x: 1
+    y: 29
+    tile: 2
   }
   cell {
     x: 17
