@@ -17,7 +17,8 @@ M.prompts = {
         events = {
             {text = "press 'p' to pause and restart"}
         },
-        replayable = true
+        replayable = true,
+        skippable = false
     }
 }
 

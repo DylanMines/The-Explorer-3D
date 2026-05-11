@@ -50,3 +50,13 @@ clear_color_blue = 0.183594
 [input]
 game_binding = /Input/game.input_bindingc
 
+[particle_fx]
+max_count = 256
+max_emitter_count = 256
+
+[model]
+max_count = 256
+
+[tilemap]
+max_tile_count = 10000
+
