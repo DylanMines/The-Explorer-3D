@@ -27,6 +27,7 @@ dependencies#4 = https://github.com/Insality/defold-event/archive/refs/tags/16.z
 dependencies#5 = https://github.com/Insality/druid/archive/refs/tags/1.2.2.zip
 dependencies#6 = https://github.com/Insality/defold-tweener/archive/refs/tags/6.zip
 dependencies#7 = https://github.com/Insality/panthera/archive/refs/tags/runtime.6.zip
+dependencies#8 = https://github.com/astrochili/defold-kinematic-walker/archive/refs/tags/1.3.2.zip
 
 [physics]
 type = 2D

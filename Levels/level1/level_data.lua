@@ -8,7 +8,8 @@ M.prompts = {
     [1] = {
         events = {
             {text = "It appears the door is closing behind me!", freeze = true},
-            {text = "I better try to find a way out", freeze = false}
+            {text = "I better try to find a way out", freeze = true},
+            {text = "Use WASD to move, and E to pickup objects", freeze = false}
         },
         replayable = false
     },

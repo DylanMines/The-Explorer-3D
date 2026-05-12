@@ -214,113 +214,118 @@ convex_hulls {
 }
 convex_hulls {
   index: 259
-  count: 4
-  collision_group: ""
-}
-convex_hulls {
-  index: 263
-  count: 4
-  collision_group: ""
-}
-convex_hulls {
-  index: 267
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 267
+  index: 259
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 267
+  index: 259
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 267
+  index: 259
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 267
+  index: 259
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 259
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 259
   count: 13
   collision_group: "default"
 }
 convex_hulls {
-  index: 280
+  index: 272
   count: 16
   collision_group: "default"
 }
 convex_hulls {
-  index: 296
-  count: 4
+  index: 288
+  count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 300
-  count: 4
+  index: 288
+  count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 304
+  index: 288
   count: 0
   collision_group: "default"
 }
 convex_hulls {
-  index: 304
+  index: 288
   count: 0
   collision_group: "default"
 }
 convex_hulls {
-  index: 304
+  index: 288
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 304
+  index: 288
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 304
+  index: 288
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 304
+  index: 288
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 304
+  index: 288
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 304
+  index: 288
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 304
+  index: 288
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 304
+  index: 288
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 304
+  index: 288
   count: 0
   collision_group: ""
 }
 convex_hulls {
-  index: 304
+  index: 288
   count: 0
   collision_group: ""
 }
 collision_groups: "default"
+animations {
+  id: "wall"
+  start_tile: 35
+  end_tile: 35
+}
 extrude_borders: 2
